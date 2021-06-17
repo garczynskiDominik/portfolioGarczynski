@@ -11,26 +11,13 @@
 
 <%@include file="dynamic/navBar.jspf"%>
 
-  <!-- ======= Hero Section ======= -->
-  <div id="hero" class="hero route bg-image" style="background-image: url(../resources/img/hero-bg.jpg)">
-    <div class="overlay-itro"></div>
-    <div class="hero-content display-table">
-      <div class="table-cell">
-        <div class="container">
-          <!--<p class="display-6 color-d">Hello, world!</p>-->
-          <h1 class="hero-title mb-4">I am Morgan Freeman</h1>
-          <p class="hero-subtitle"><span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p>
-          <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
-        </div>
-      </div>
-    </div>
-  </div><!-- End Hero Section -->
+<%@include file="home/home.jsp"%>
 
   <main id="main">
 
-    <%@include file="about/about.jspf"%>
+    <%@include file="about/about.jsp"%>
 
-    <%@include file="services/services.jspf"%>
+    <%@include file="services/services.jsp"%>
 
     <!-- ======= Counter Section ======= -->
     <div class="section-counter paralax-mf bg-image" style="background-image: url(../resources/img/counters-bg.jpg)">
@@ -85,7 +72,7 @@
       </div>
     </div><!-- End Counter Section -->
 
-    <%@include file="work/work.jspf"%>
+    <%@include file="work/work.jsp"%>
 
 
     <!-- ======= Testimonials Section ======= -->
@@ -139,10 +126,10 @@
       </div>
     </div><!-- End Testimonials Section -->
 
-    <%@include file="blog/blog.jspf"%>
+    <%@include file="blog/blog.jsp"%>
 
 
-    <%@include file="contactSection/contact.jspf"%>
+    <%@include file="contactSection/contact.jsp"%>
 
 
   </main><!-- End #main -->
@@ -173,6 +160,7 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <%@include file="dynamic/javaScript.jspf"%>
+
 
 </body>
 

@@ -7,4 +7,4 @@
 <script src='<c:url value="/resources/vendor/typed.js/typed.min.js"/>'></script>
 
 <!-- Template Main JS File -->
-<script src='<c:url value="/resources/js/main.js"/>'></script>
+<script src='<c:url value="/resources/css/style.css"/>'></script>

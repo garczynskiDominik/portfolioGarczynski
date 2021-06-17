@@ -3,7 +3,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 
 
-
+<%@include file="../dynamic/css.jspf" %>
 <!-- ======= Contact Section ======= -->
 <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(../resources/img/overlay-bg.jpg)">
     <div class="overlay-mf"></div>

@@ -22,10 +22,4 @@
     <!-- Template Main CSS File -->
     <link href='<c:url value="/resources/css/style.css"/>' rel="stylesheet">
 
-    <!-- =======================================================
-    * Template Name: DevFolio - v4.3.0
-    * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
 </head>
