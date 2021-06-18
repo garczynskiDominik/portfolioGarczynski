@@ -134,7 +134,7 @@
                     </div>
                 </div>
             </div>
-            <input class="btn btn-success pull-left" type="submit" value="Zapisz zmiany"
+            <input class="btn btn-dark pull-left" type="submit" value="Save"
                    id="searchButton"></input>
         </form>
     </div>
