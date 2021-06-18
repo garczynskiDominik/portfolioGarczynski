@@ -96,6 +96,11 @@
                                                     <input class="form-control" type="text" name="htmlCss"
                                                            value="${about.htmlCss}">
                                                 </div>
+                                                <div class="col-2">
+                                                    <label class="col-form-label">JAVA SCRIPT</label>
+                                                    <input class="form-control" type="text" name="JavaScript"
+                                                           value="${about.javaScript}">
+                                                </div>
 
 
                                             </div>
