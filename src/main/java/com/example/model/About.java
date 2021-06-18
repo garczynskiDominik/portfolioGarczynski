@@ -17,11 +17,19 @@ public class About {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     private String name;
     private String profile;
     private String email;
-    private int number;
+    private Integer number;
     private String aboutMe;
+    private Integer java;
+    private Integer git;
+    private Integer spring;
+    private Integer mySql;
+    private Integer hibernate;
+    private Integer htmlCss;
+    private Integer javaScript;
 
 
 }
