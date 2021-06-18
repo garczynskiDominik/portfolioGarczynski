@@ -3,6 +3,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 
 <%@include file="../dynamic/css.jspf"%>
+<%@include file="../dynamic/navBar.jspf" %>
 
 <!-- ======= Blog Section ======= -->
 <section id="blog" class="blog-mf sect-pt4 route">

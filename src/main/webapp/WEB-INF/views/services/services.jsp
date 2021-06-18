@@ -4,7 +4,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@include file="../dynamic/css.jspf"%>
 
-
+<%@include file="../dynamic/navBar.jspf" %>
 <!-- ======= Services Section ======= -->
 <section id="services" class="services-mf pt-5 route">
     <div class="container">

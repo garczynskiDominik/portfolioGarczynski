@@ -4,162 +4,96 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 
 
-<%@include file="dynamic/css.jspf"%>
+<%@include file="dynamic/css.jspf" %>
 
 
 <body>
 
-<%@include file="dynamic/navBar.jspf"%>
+<%@include file="dynamic/navBar.jspf" %>
 
-<%@include file="home/home.jsp"%>
+<%@include file="home/home.jsp" %>
 
-  <main id="main">
+<main id="main">
 
-    <%@include file="about/about.jsp"%>
+    <%@include file="about/about.jsp" %>
 
-    <%@include file="services/services.jsp"%>
+    <%@include file="services/services.jsp" %>
 
-    <!-- ======= Counter Section ======= -->
-    <div class="section-counter paralax-mf bg-image" style="background-image: url(../resources/img/counters-bg.jpg)">
-      <div class="overlay-mf"></div>
-      <div class="container position-relative">
-        <div class="row">
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="bi bi-check"></i></span>
-              </div>
-              <div class="counter-num">
-                <p data-purecounter-start="0" data-purecounter-end="450" data-purecounter-duration="1" class="counter purecounter"></p>
-                <span class="counter-text">WORKS COMPLETED</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="bi bi-journal-richtext"></i></span>
-              </div>
-              <div class="counter-num">
-                <p data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="1" class="counter purecounter"></p>
-                <span class="counter-text">YEARS OF EXPERIENCE</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="bi bi-people"></i></span>
-              </div>
-              <div class="counter-num">
-                <p data-purecounter-start="0" data-purecounter-end="550" data-purecounter-duration="1" class="counter purecounter"></p>
-                <span class="counter-text">TOTAL CLIENTS</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="bi bi-award"></i></span>
-              </div>
-              <div class="counter-num">
-                <p data-purecounter-start="0" data-purecounter-end="48" data-purecounter-duration="1" class="counter purecounter"></p>
-                <span class="counter-text">AWARD WON</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div><!-- End Counter Section -->
+    <%@include file="dynamic/counter.jspf" %>
 
-    <%@include file="work/work.jsp"%>
-
+    <%@include file="work/work.jsp" %>
 
     <!-- ======= Testimonials Section ======= -->
-    <div class="testimonials paralax-mf bg-image" style="background-image: url(../resources/img/overlay-bg.jpg)">
-      <div class="overlay-mf"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
+    <div class="testimonials paralax-mf bg-image" style="background-image: url(/resources/img/overlay-bg.jpg)">
+        <div class="overlay-mf"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
 
-            <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
-              <div class="swiper-wrapper">
+                    <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+                        <div class="swiper-wrapper">
 
-                <div class="swiper-slide">
-                  <div class="testimonial-box">
-                    <div class="author-test">
-                      <img src="../resources/img/testimonial-2.jpg" alt="" class="rounded-circle b-shadow-a">
-                      <span class="author">Xavi Alonso</span>
-                    </div>
-                    <div class="content-test">
-                      <p class="description lead">
-                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit.
-                      </p>
-                    </div>
-                  </div>
-                </div><!-- End testimonial item -->
+                            <div class="swiper-slide">
+                                <div class="testimonial-box">
+                                    <div class="author-test">
+                                        <img src="../resources/img/testimonial-2.jpg" alt=""
+                                             class="rounded-circle b-shadow-a">
+                                        <span class="author">Xavi Alonso</span>
+                                    </div>
+                                    <div class="content-test">
+                                        <p class="description lead">
+                                            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum
+                                            dolor sit amet,
+                                            consectetur adipiscing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><!-- End testimonial item -->
 
-                <div class="swiper-slide">
-                  <div class="testimonial-box">
-                    <div class="author-test">
-                      <img src="../resources/img/testimonial-4.jpg" alt="" class="rounded-circle b-shadow-a">
-                      <span class="author">Marta Socrate</span>
+                            <div class="swiper-slide">
+                                <div class="testimonial-box">
+                                    <div class="author-test">
+                                        <img src="../resources/img/testimonial-4.jpg" alt=""
+                                             class="rounded-circle b-shadow-a">
+                                        <span class="author">Marta Socrate</span>
+                                    </div>
+                                    <div class="content-test">
+                                        <p class="description lead">
+                                            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum
+                                            dolor sit amet,
+                                            consectetur adipiscing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><!-- End testimonial item -->
+                        </div>
+                        <div class="swiper-pagination"></div>
                     </div>
-                    <div class="content-test">
-                      <p class="description lead">
-                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit.
-                      </p>
-                    </div>
-                  </div>
-                </div><!-- End testimonial item -->
-              </div>
-              <div class="swiper-pagination"></div>
+
+                    <!-- <div id="testimonial-mf" class="owl-carousel owl-theme">
+
+                </div> -->
+                </div>
             </div>
-
-            <!-- <div id="testimonial-mf" class="owl-carousel owl-theme">
-          
-        </div> -->
-          </div>
         </div>
-      </div>
     </div><!-- End Testimonials Section -->
 
-    <%@include file="blog/blog.jsp"%>
+
+    <%@include file="blog/blog.jsp" %>
 
 
-    <%@include file="contactSection/contact.jsp"%>
+    <%@include file="contactSection/contact.jsp" %>
 
 
-  </main><!-- End #main -->
+</main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="copyright-box">
-            <p class="copyright">&copy; Copyright <strong>DevFolio</strong>. All Rights Reserved</p>
-            <div class="credits">
-              <!--
-              All the links in the footer should remain intact.
-              You can delete the links only if you purchased the pro version.
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=DevFolio
-            -->
-              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer><!-- End  Footer -->
+<%@include file="dynamic/footer.jspf" %>
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
 
-  <%@include file="dynamic/javaScript.jspf"%>
+<%@include file="dynamic/javaScript.jspf" %>
 
 
 </body>

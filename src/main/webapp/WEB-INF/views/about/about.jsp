@@ -9,6 +9,7 @@
 
 <%@include file="../dynamic/css.jspf" %>
 <body>
+<%@include file="../dynamic/navBar.jspf" %>
 
 
 <!-- ======= About Section ======= -->

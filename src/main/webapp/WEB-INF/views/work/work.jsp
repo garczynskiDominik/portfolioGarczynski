@@ -3,7 +3,7 @@
 <%--<jsp:useBean id="now" class="java.util.Date"/>--%>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@include file="../dynamic/css.jspf"%>
-
+<%@include file="../dynamic/navBar.jspf" %>
 
 <!-- ======= Portfolio Section ======= -->
 <section id="work" class="portfolio-mf sect-pt4 route">
