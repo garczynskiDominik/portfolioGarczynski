@@ -22,9 +22,16 @@
                                 <div class="row">
                                     <div class="col-sm-6 col-md-5">
                                         <div class="about-img">
-                                            <img src='<c:url value="/resources/img/testimonial-2.jpg"/>'
-                                                 class="img-fluid rounded b-shadow-a" alt="">
+                                            <img SRC="${about.img}"
+                                                 width="150" height="200">
+                                            </br>
+
+
                                         </div>
+                                        <input class="form-control"
+                                               type="text"
+                                               name="img"
+                                               placeholder="enter link to new photo">
                                     </div>
                                     <div class="col-sm-6 col-md-7">
                                         <div class="about-info">

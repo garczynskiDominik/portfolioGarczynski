@@ -23,8 +23,8 @@
                                 <div class="row">
                                     <div class="col-sm-6 col-md-5">
                                         <div class="about-img">
-                                            <img src='<c:url value="/resources/img/testimonial-2.jpg"/>'
-                                                 class="img-fluid rounded b-shadow-a" alt="">
+                                            <img SRC="${title.img}"
+                                                 width="150" height="200">
                                         </div>
                                     </div>
 
@@ -99,7 +99,7 @@
                                     </div>
                                     <p class="lead">
                                             ${title.aboutMe
-                                            }
+                                                    }
                                     </p>
 
                                 </div>

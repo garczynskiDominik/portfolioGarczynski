@@ -30,6 +30,7 @@ public class About {
     private Integer hibernate;
     private Integer htmlCss;
     private Integer javaScript;
+    private String img;
 
 
 }

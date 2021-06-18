@@ -13,7 +13,7 @@ public class AboutServices {
         this.aboutRepository = aboutRepository;
     }
 
-    public About getAbout(Long id){
+    public About getAbout(Long id) {
         return aboutRepository.findById(id).orElse(null);
     }
 
@@ -31,7 +31,8 @@ public class AboutServices {
                 about.getMySql(),
                 about.getHibernate(),
                 about.getHtmlCss(),
-                about.getJavaScript());
+                about.getJavaScript(),
+                about.getImg());
         aboutRepository.save(edit);
         System.out.println("adding person on id:" + edit.getId());
 
