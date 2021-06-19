@@ -38,10 +38,13 @@
                                                     class="col-2 col-form-label"></label>
                                             <input class="form-control" type="text" name="name" value="${about.name}">
                                         </span></p>
-                                            <p><span class=" title-s">Profile: </span> <span><input class="form-control"
-                                                                                                    type="text"
-                                                                                                    name="profile"
-                                                                                                    value="${about.profile}"></span>
+                                            <p><span class=" title-s">Profile: </span> <span>
+
+                                                <input class="form-control"
+                                                       type="text"
+                                                       name="profile"
+                                                       value="${about.profile}">
+                                            </span>
                                             </p>
                                             <p><span class="title-s">Email: </span> <span><input class="form-control"
                                                                                                  type="text"
@@ -127,13 +130,30 @@
                                 >${about.aboutMe}</textarea>
                                     </div>
                                     </p>
+                                    <p><span class="title-s">Facebook</span> <span><input class="form-control"
+                                                                                          type="text"
+                                                                                          name="facebook"
+                                                                                          value="${about.facebook}"></span>
+                                    </p>
+                                    <p><span class="title-s">GitHub</span> <span><input class="form-control"
+                                                                                        type="text"
+                                                                                        name="github"
+                                                                                        value="${about.github}"></span>
+                                    </p>
+                                    <p><span class="title-s">Linkedin</span> <span><input class="form-control"
+                                                                                          type="text"
+                                                                                          name="linkedin"
+                                                                                          value="${about.linkedin}"></span>
+                                    </p>
                                 </div>
 
                             </div>
-                            <input class="button button-a button-big button-rouded" type="submit" value="Save"
-                                   id="searchButton"></input>
+                            <div class="col-10">
+                                <input class="button button-a button-big button-rouded" type="submit" value="Save"
+                                       id="searchButton"></input>
+                            </div>
 
-<%--                            <button type="submit" class="button button-a button-big button-rouded">Send Message</button>--%>
+                            <%--                            <button type="submit" class="button button-a button-big button-rouded">Send Message</button>--%>
                         </div>
                     </div>
 

@@ -17,7 +17,7 @@
 
     <%@include file="about/about.jsp" %>
 
-    <%@include file="services/services.jsp" %>
+    <%@include file="technologies/technologies.jsp" %>
 
     <%@include file="dynamic/counter.jspf" %>
 
@@ -79,7 +79,7 @@
     </div><!-- End Testimonials Section -->
 
 
-    <%@include file="blog/blog.jsp" %>
+    <%@include file="education/education.jsp" %>
 
 
     <%@include file="contactSection/contact.jsp" %>

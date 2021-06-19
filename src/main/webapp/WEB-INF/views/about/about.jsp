@@ -1,6 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
@@ -105,6 +105,12 @@
                             </div>
                         </div>
                     </c:forEach>
+                    <sec:authorize access="hasRole('ADMIN')">
+                        <c:forEach items="${about}" var="title">
+                            <a href='<c:url value="/editAbout/${title.id}"/>'
+                               class="btn-right btn btn-secondary" role="button"><i class="bx bx-edit"></i>Edit</a>
+                        </c:forEach>
+                    </sec:authorize>
                 </div>
             </div>
         </div>

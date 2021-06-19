@@ -33,7 +33,6 @@ public class AboutController {
         return "about/about";
     }
 
-
     //add
     @RequestMapping(value = {"/addAbout"}, method = RequestMethod.POST)
     public RedirectView addAbout(@ModelAttribute About about) {

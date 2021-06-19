@@ -64,40 +64,39 @@
                             </div>
 
 
-
-                                <div class="col-md-6">
-                                    <div class="title-box-2 pt-4 pt-md-0">
-                                        <h5 class="title-left">
-                                            Get in Touch
-                                        </h5>
-                                    </div>
-
-<c:forEach items="${about}" var="title">
-                                    <div class="more-info">
-                                        <p class="lead">
-                                            If You want work with me..
-                                        </p>
-
-
-                                        <ul class="list-ico">
-                                            <li><span class="bi bi-geo-alt"></span> ${titile.address}</li>
-                                            <li><span class="bi bi-phone"></span> ${titile.number}</li>
-                                            <li><span class="bi bi-envelope"></span> ${titile.email}</li>
-                                        </ul>
-                                    </div>
-                                    <div class="socials">
-                                        <ul>
-                                            <li><a href="${title.facebook}"><span class="ico-circle"><i
-                                                    class="bi bi-facebook"></i></span></a></li>
-                                            <li><a href=""><span class="ico-circle"><i
-                                                    class="bi bi-instagram"></i></span></a></li>
-                                            <li><a href=""><span class="ico-circle"><i class="bi bi-twitter"></i></span></a>
-                                            </li>
-                                            <li><a href=""><span class="ico-circle"><i
-                                                    class="bi bi-linkedin"></i></span></a></li>
-                                        </ul>
-                                    </div>
+                            <div class="col-md-6">
+                                <div class="title-box-2 pt-4 pt-md-0">
+                                    <h5 class="title-left">
+                                        Get in Touch
+                                    </h5>
                                 </div>
+
+                                <c:forEach items="${about}" var="title">
+                                <div class="more-info">
+                                    <p class="lead">
+                                        If You want work with me..
+                                    </p>
+
+
+                                    <ul class="list-ico">
+                                        <li><span class="bi bi-geo-alt"></span> ${title.address}</li>
+                                        <li><span class="bi bi-phone"></span> ${title.number}</li>
+                                        <li><span class="bi bi-envelope"></span> ${title.email}</li>
+                                    </ul>
+                                </div>
+                                <div class="socials">
+                                    <ul>
+                                        <li><a href="${title.facebook}"><span class="ico-circle"><i
+                                                class="bi bi-facebook"></i></span></a></li>
+                                        <li><a href=""><span class="ico-circle"><i
+                                                class="bi bi-instagram"></i></span></a></li>
+                                        <li><a href=""><span class="ico-circle"><i class="bi bi-twitter"></i></span></a>
+                                        </li>
+                                        <li><a href=""><span class="ico-circle"><i
+                                                class="bi bi-linkedin"></i></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
 
                             </c:forEach>
 
