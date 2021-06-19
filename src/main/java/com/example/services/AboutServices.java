@@ -32,7 +32,11 @@ public class AboutServices {
                 about.getHibernate(),
                 about.getHtmlCss(),
                 about.getJavaScript(),
-                about.getImg());
+                about.getImg(),
+                about.getAddress(),
+                about.getFacebook(),
+                about.getGithub(),
+                about.getLinkedin());
         aboutRepository.save(edit);
         System.out.println("adding person on id:" + edit.getId());
 

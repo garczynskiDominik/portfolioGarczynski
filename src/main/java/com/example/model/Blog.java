@@ -1,4 +1,4 @@
 package com.example.model;
 
-public class Skill {
+public class Blog {
 }

@@ -1,6 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
@@ -129,14 +128,21 @@
                                     </div>
                                     </p>
                                 </div>
+
                             </div>
+                            <input class="button button-a button-big button-rouded" type="submit" value="Save"
+                                   id="searchButton"></input>
+
+<%--                            <button type="submit" class="button button-a button-big button-rouded">Send Message</button>--%>
                         </div>
                     </div>
+
                 </div>
             </div>
-            <input class="btn btn-dark pull-left" type="submit" value="Save"
-                   id="searchButton"></input>
+
         </form>
     </div>
-</section>
-<!-- End About Section -->
+</section><!-- End About Section -->
+
+
+<%@include file="../dynamic/footer.jspf" %>

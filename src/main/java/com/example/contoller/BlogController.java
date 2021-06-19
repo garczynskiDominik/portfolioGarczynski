@@ -4,10 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
-public class Work {
+public class BlogController {
 
-    @RequestMapping(value = {"/work"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/blog"}, method = RequestMethod.GET)
     public String getAbout(){
-        return "work/work";
+        return "blog/blog";
     }
 }

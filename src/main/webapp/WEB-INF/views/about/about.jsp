@@ -98,8 +98,7 @@
                                         </h5>
                                     </div>
                                     <p class="lead">
-                                            ${title.aboutMe
-                                                    }
+                                            ${title.aboutMe}
                                     </p>
 
                                 </div>
@@ -111,4 +110,7 @@
         </div>
     </div>
 </section>
+
+<%@include file="../dynamic/footer.jspf" %>
+
 <!-- End About Section -->

@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%--<jsp:useBean id="now" class="java.util.Date"/>--%>
 <%@ page contentType="text/html; charset=UTF-8" %>
-<%@include file="../dynamic/css.jspf"%>
+<%@include file="../dynamic/css.jspf" %>
 <%@include file="../dynamic/navBar.jspf" %>
 
 <!-- ======= Portfolio Section ======= -->
@@ -15,158 +15,47 @@
                         Portfolio
                     </h3>
                     <p class="subtitle-a">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        My projeckts.
                     </p>
                     <div class="line-mf"></div>
                 </div>
             </div>
         </div>
+
+
         <div class="row">
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="/resources/img/work-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                        <div class="work-img">
-                            <img src="../resources/img/work-1.jpg" alt="" class="img-fluid">
-                        </div>
-                    </a>
-                    <div class="work-content">
-                        <div class="row">
-                            <div class="col-sm-8">
-                                <h2 class="w-title">Lorem impsum dolor</h2>
-                                <div class="w-more">
-                                    <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                                </div>
+
+            <c:forEach items="${work}" var="title">
+                <div class="col-md-4">
+                    <div class="work-box">
+                        <a href="/resources/img/work-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                            <div class="work-img">
+                                <img src="../resources/img/work-1.jpg" alt="" class="img-fluid">
                             </div>
-                            <div class="col-sm-4">
-                                <div class="w-like">
-                                    <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
+                        </a>
+                        <div class="work-content">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <h2 class="w-title">${title.title}</h2>
+                                    <div class="w-more">
+                                        <span class="w-ctegory">${title.category}</span> / <span
+                                            class="w-date">${title.date}</span>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="../resources/img/work-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                        <div class="work-img">
-                            <img src="../resources/img/work-2.jpg" alt="" class="img-fluid">
-                        </div>
-                    </a>
-                    <div class="work-content">
-                        <div class="row">
-                            <div class="col-sm-8">
-                                <h2 class="w-title">Loreda Cuno Nere</h2>
-                                <div class="w-more">
-                                    <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="w-like">
-                                    <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
+                                <div class="col-sm-4">
+                                    <div class="w-like">
+                                        <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="../resources/img/work-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                        <div class="work-img">
-                            <img src="../resources/img/work-3.jpg" alt="" class="img-fluid">
-                        </div>
-                    </a>
-                    <div class="work-content">
-                        <div class="row">
-                            <div class="col-sm-8">
-                                <h2 class="w-title">Mavrito Lana Dere</h2>
-                                <div class="w-more">
-                                    <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="w-like">
-                                    <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="../resources/img/work-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                        <div class="work-img">
-                            <img src="../resources/img/work-4.jpg" alt="" class="img-fluid">
-                        </div>
-                    </a>
-                    <div class="work-content">
-                        <div class="row">
-                            <div class="col-sm-8">
-                                <h2 class="w-title">Bindo Laro Cado</h2>
-                                <div class="w-more">
-                                    <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="w-like">
-                                    <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="../resources/img/work-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                        <div class="work-img">
-                            <img src="../resources/img/work-5.jpg" alt="" class="img-fluid">
-                        </div>
-                    </a>
-                    <div class="work-content">
-                        <div class="row">
-                            <div class="col-sm-8">
-                                <h2 class="w-title">Studio Lena Mado</h2>
-                                <div class="w-more">
-                                    <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="w-like">
-                                    <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="../resources/img/work-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                        <div class="work-img">
-                            <img src="../resources/img/work-6.jpg" alt="" class="img-fluid">
-                        </div>
-                    </a>
-                    <div class="work-content">
-                        <div class="row">
-                            <div class="col-sm-8">
-                                <h2 class="w-title">Studio Big Bang</h2>
-                                <div class="w-more">
-                                    <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2017</span>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="w-like">
-                                    <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </c:forEach>
+
 
         </div>
     </div>
-</section><!-- End Portfolio Section -->
+</section>
+<!-- End Portfolio Section -->
+<%@include file="../dynamic/footer.jspf" %>

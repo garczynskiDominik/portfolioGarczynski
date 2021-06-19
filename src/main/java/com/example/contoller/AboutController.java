@@ -25,7 +25,7 @@ public class AboutController {
     }
 
 
-    //get all about
+    //get all
     @RequestMapping(value = {"/about"}, method = RequestMethod.GET)
     public String getAbouts(Model model) {
         List<About> list = aboutRepository.findAll();
@@ -41,7 +41,7 @@ public class AboutController {
         return new RedirectView("/about");
     }
 
-    //edit
+    //edit post
     @RequestMapping(value = {"/editAbout/{id}"}, method = RequestMethod.POST)
     public RedirectView saveEditPerson(@ModelAttribute About about, @PathVariable("id") Long id) {
         aboutServices.editAbout(about, id);
@@ -49,6 +49,7 @@ public class AboutController {
 
     }
 
+    //edit get
     @RequestMapping(value = {"/editAbout/{id}"}, method = RequestMethod.GET)
     public String getEditAbout(Model model, @PathVariable("id") Long id) {
         model.addAttribute("about", aboutServices.getAbout(id));

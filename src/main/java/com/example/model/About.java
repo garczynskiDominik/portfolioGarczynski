@@ -31,6 +31,10 @@ public class About {
     private Integer htmlCss;
     private Integer javaScript;
     private String img;
+    private String address;
+    private String facebook;
+    private String github;
+    private String linkedin;
 
 
 }

@@ -118,3 +118,4 @@
         </div>
     </div>
 </section><!-- End Blog Section -->
+<%@include file="../dynamic/footer.jspf" %>
