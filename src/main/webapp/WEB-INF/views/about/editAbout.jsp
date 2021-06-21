@@ -30,7 +30,7 @@
                                         <input class="form-control"
                                                type="text"
                                                name="img"
-                                               placeholder="enter link to new photo">
+                                               value="${about.img}">
                                     </div>
                                     <div class="col-sm-6 col-md-7">
                                         <div class="about-info">
@@ -130,6 +130,11 @@
                                 >${about.aboutMe}</textarea>
                                     </div>
                                     </p>
+                                    <p><span class="title-s">Address</span> <span><input class="form-control"
+                                                                                          type="text"
+                                                                                          name="address"
+                                                                                          value="${about.address}"></span>
+                                    </p>
                                     <p><span class="title-s">Facebook</span> <span><input class="form-control"
                                                                                           type="text"
                                                                                           name="facebook"
@@ -145,6 +150,7 @@
                                                                                           name="linkedin"
                                                                                           value="${about.linkedin}"></span>
                                     </p>
+
                                 </div>
 
                             </div>

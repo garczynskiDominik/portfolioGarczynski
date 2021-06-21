@@ -24,6 +24,8 @@ public class ContactController {
         model.addAttribute("about", list);
         return "contactSection/contact";
     }
+
+
 }
 
 

@@ -15,23 +15,20 @@
 
         <nav id="navbar" class="navbar">
             <ul>.
-                <li><a class="nav-link scrollto active" href='<c:url value="/home"/>'>Home</a>
-                </li>
+                <li><a class="nav-link scrollto" href='<c:url value="/home"/>'>Home</a></li>
                 <li><a class="nav-link scrollto" href='<c:url value="/about"/>'>About</a></li>
                 <li><a class="nav-link scrollto" href='<c:url value="/technologies"/>'>Technologies</a></li>
-                <li><a class="nav-link scrollto " href='<c:url value="/work"/>'>Work</a></li>
-                <li><a class="nav-link scrollto " href='<c:url value="/education"/>'>Education</a></li>
+                <li><a class="nav-link scrollto" href='<c:url value="/work"/>'>Work</a></li>
+                <li><a class="nav-link scrollto" href='<c:url value="/education"/>'>Education</a></li>
                 <li><a class="nav-link scrollto" href='<c:url value="/contact"/>'>Contact</a>
                 </li>
                 <li class="dropdown"><a href="#"><span>Account</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li>
-                        <li><a class="nav-link scrollto" href='<c:url value="/login"/>'>Log in</a></li>
 
-
-                        <sec:authorize access="hasRole('ADMIN')">
-                                <a href='<c:url value="/logout"/>' class="nav-link scrollto">Log out</a>
-                        </sec:authorize>
+                            <sec:authorize access="hasAnyRole('ADMIN', 'USER')">
+                            <a href='<c:url value="/logout"/>' class="nav-link scrollto">Log out</a>
+                            </sec:authorize>
 
 
                     </ul>

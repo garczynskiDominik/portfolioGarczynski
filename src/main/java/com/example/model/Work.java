@@ -28,4 +28,5 @@ public class Work {
     private String category;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date;
+    private String url;
 }

@@ -88,11 +88,9 @@
                                     <ul>
                                         <li><a href="${title.facebook}"><span class="ico-circle"><i
                                                 class="bi bi-facebook"></i></span></a></li>
-                                        <li><a href=""><span class="ico-circle"><i
-                                                class="bi bi-instagram"></i></span></a></li>
-                                        <li><a href=""><span class="ico-circle"><i class="bi bi-twitter"></i></span></a>
-                                        </li>
-                                        <li><a href=""><span class="ico-circle"><i
+                                        <li><a href="${title.github}"><span class="ico-circle"><i
+                                                class="bi bi-github"></i></span></a></li>
+                                        <li><a href="${title.linkedin}"><span class="ico-circle"><i
                                                 class="bi bi-linkedin"></i></span></a></li>
                                     </ul>
                                 </div>

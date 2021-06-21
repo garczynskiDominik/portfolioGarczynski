@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.view.RedirectView;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Controller
@@ -25,7 +26,6 @@ public class WorkController {
     }
 
 
-
     //get all
     @RequestMapping(value = {"/work"}, method = RequestMethod.GET)
     public String getWork(Model model) {
@@ -34,6 +34,11 @@ public class WorkController {
         return "work/work";
     }
 
+    //add
+    @RequestMapping(value = {"/addWork"}, method = RequestMethod.GET)
+    public String getAddWork() {
+        return "work/addWork";
+    }
 
     //add
     @RequestMapping(value = {"/addWork"}, method = RequestMethod.POST)
@@ -46,7 +51,7 @@ public class WorkController {
     @RequestMapping(value = {"/editWork/{id}"}, method = RequestMethod.POST)
     public RedirectView saveEditWork(@ModelAttribute Work work, @PathVariable("id") Long id) {
         workServices.editWork(work, id);
-        return new RedirectView("/editWork/{id}");
+        return new RedirectView("/work");
 
     }
 
@@ -57,7 +62,9 @@ public class WorkController {
         return "work/editWork";
     }
 
-    @RequestMapping(value = {"/deleteWork/{id}"}, method = {RequestMethod.GET, RequestMethod.POST})
+    //delete
+    @Transactional
+    @RequestMapping(value = {"/deleteWork/{id}"}, method = { RequestMethod.POST, RequestMethod.DELETE})
     public RedirectView deleteWork(@PathVariable("id") Long id) {
         workRepository.deleteById(id);
         return new RedirectView("/work");

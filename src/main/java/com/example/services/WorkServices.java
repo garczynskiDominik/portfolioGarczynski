@@ -16,16 +16,17 @@ public class WorkServices {
         return workRepository.findById(id).orElse(null);
     }
 
-    public void editWork(Work work, Long id){
+    public void editWork(Work work, Long id) {
         Work edit = new Work(
                 id,
                 work.getImg(),
                 work.getTitle(),
                 work.getCategory(),
-                work.getDate());
+                work.getDate(),
+                work.getUrl());
 
         workRepository.save(edit);
-        System.out.printf("adding work on id: "+ edit.getId());
+        System.out.printf("adding work on id: " + edit.getId());
     }
 
 }
