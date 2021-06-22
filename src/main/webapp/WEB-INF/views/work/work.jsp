@@ -23,7 +23,10 @@
             </div>
         </div>
 
-
+        <sec:authorize access="hasRole('ADMIN')">
+            <a href='<c:url value="/addWork"/>' class="btn-right btn btn-secondary" role="button"><i
+                    class="bx bx-edit"></i>Add</a>
+        </sec:authorize>
         <div class="row">
 
             <c:forEach items="${work}" var="title">

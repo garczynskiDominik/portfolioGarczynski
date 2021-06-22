@@ -16,7 +16,14 @@
         <div class="row">
 
             <div class="col-sm-12">
+
                 <div class="box-shadow-full">
+                    <sec:authorize access="hasRole('ADMIN')">
+                        <c:forEach items="${about}" var="title">
+                            <a href='<c:url value="/editAbout/${title.id}"/>'
+                               class="btn-right btn btn-secondary" role="button"><i class="bx bx-edit"></i>Edit</a>
+                        </c:forEach>
+                    </sec:authorize>
                     <c:forEach items="${about}" var="title">
                         <div class="row">
                             <div class="col-md-6">
@@ -68,18 +75,6 @@
                                              aria-valuenow="${title.mySql}"
                                              aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
-                                    <span>HIBERNATE</span> <span class="pull-right">${title.hibernate}%</span>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: ${title.hibernate}%"
-                                             aria-valuenow="${title.hibernate}"
-                                             aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <span>HTML/CSS</span> <span class="pull-right">${title.htmlCss}%</span>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: ${title.htmlCss}%"
-                                             aria-valuenow="${title.htmlCss}"
-                                             aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
                                     <span>JAVA SCRIPT</span> <span class="pull-right">${title.javaScript}%</span>
                                     <div class="progress">
                                         <div class="progress-bar" role="progressbar" style="width: ${title.javaScript}%"
@@ -105,12 +100,7 @@
                             </div>
                         </div>
                     </c:forEach>
-                    <sec:authorize access="hasRole('ADMIN')">
-                        <c:forEach items="${about}" var="title">
-                            <a href='<c:url value="/editAbout/${title.id}"/>'
-                               class="btn-right btn btn-secondary" role="button"><i class="bx bx-edit"></i>Edit</a>
-                        </c:forEach>
-                    </sec:authorize>
+
                 </div>
             </div>
         </div>

@@ -27,13 +27,13 @@
                                         <div class="col-md-12 mb-3">
                                             <div class="form-group">
                                                 <input type="text" name="username" class="form-control" id="username"
-                                                       placeholder="your username" required>
+                                                       placeholder="default: user, for extra option: admin" required>
                                             </div>
                                         </div>
                                         <div class="col-md-12 mb-3">
                                             <div class="form-group">
                                                 <input type="password" class="form-control" name="password"
-                                                       id="password" placeholder="your password" required>
+                                                       id="password" placeholder="default: user, for extra option: admin" required>
                                             </div>
                                         </div>
                                         <input type="submit" class="button button-a button-big button-rouded"
@@ -49,9 +49,10 @@
                                         Hello this is my portfolio
                                     </h5>
                                 </div>
+
                                 <div class="more-info">
                                     <p class="lead">
-                                        My name is Domnik....
+                                        My name is Dominik....
                                     </p>
                                     <ul class="list-ico">
                                         <li><span class="bi bi-geo-alt"></span> Rzeszów</li>
@@ -61,17 +62,16 @@
                                 </div>
                                 <div class="socials">
                                     <ul>
-                                        <li><a href=""><span class="ico-circle"><i
+                                        <li><a href="https://www.facebook.com/zgarniacz"><span class="ico-circle"><i
                                                 class="bi bi-facebook"></i></span></a></li>
-                                        <li><a href=""><span class="ico-circle"><i
-                                                class="bi bi-instagram"></i></span></a></li>
-                                        <li><a href=""><span class="ico-circle"><i class="bi bi-twitter"></i></span></a>
-                                        </li>
-                                        <li><a href=""><span class="ico-circle"><i
+                                        <li><a href="https://github.com/garczynskiDominik"><span class="ico-circle"><i
+                                                class="bi bi-github"></i></span></a></li>
+                                        <li><a href="https://www.linkedin.com/in/dominik-garczy%C5%84ski-84139a12a/"><span class="ico-circle"><i
                                                 class="bi bi-linkedin"></i></span></a></li>
                                     </ul>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>

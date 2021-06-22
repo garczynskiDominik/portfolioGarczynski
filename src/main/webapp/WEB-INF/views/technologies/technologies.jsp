@@ -1,10 +1,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<%--<jsp:useBean id="now" class="java.util.Date"/>--%>
 <%@ page contentType="text/html; charset=UTF-8" %>
-<%@include file="../dynamic/css.jspf"%>
+<%@include file="../dynamic/css.jspf" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+
 
 <%@include file="../dynamic/navBar.jspf" %>
+
+
 <!-- ======= Services Section ======= -->
 <section id="services" class="services-mf pt-5 route">
     <div class="container">
@@ -12,106 +15,46 @@
             <div class="col-sm-12">
                 <div class="title-box text-center">
                     <h3 class="title-a">
-                        Services
+                        Technologies
                     </h3>
                     <p class="subtitle-a">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Technologies I was learning.
                     </p>
                     <div class="line-mf"></div>
                 </div>
             </div>
         </div>
+        <sec:authorize access="hasRole('ADMIN')">
+            <a href='<c:url value="/addTechnologies"/>' class="btn-right btn btn-secondary" role="button"><i
+                    class="bx bx-edit"></i>Add</a>
+        </sec:authorize>
+
+
         <div class="row">
-            <div class="col-md-4">
-                <div class="service-box">
-                    <div class="service-ico">
-                        <span class="ico-circle"><i class="bi bi-briefcase"></i></span>
-                    </div>
-                    <div class="service-content">
-                        <h2 class="s-title">Web Design</h2>
-                        <p class="s-description text-center">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
-                            provident vitae! Magni
-                            tempora perferendis eum non provident.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service-box">
-                    <div class="service-ico">
-                        <span class="ico-circle"><i class="bi bi-card-checklist"></i></span>
-                    </div>
-                    <div class="service-content">
-                        <h2 class="s-title">Web Development</h2>
-                        <p class="s-description text-center">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
-                            provident vitae! Magni
-                            tempora perferendis eum non provident.
-                        </p>
+            <c:forEach items="${technologies}" var="techno">
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <div class="service-ico">
+                            <span class="ico-circle"><i class="${techno.logo}"></i></span>
+                        </div>
+                        <div class="service-content">
+                            <h2 class="s-title">${techno.title}</h2>
+                            <p class="s-description text-center">
+                                    ${techno.description}
+                            </p>
+                        </div>
+                        <sec:authorize access="hasRole('ADMIN')">
+                            <a href='<c:url value="/editTechnologies/${techno.id}"/>'> <span
+                                    class="bi bi-arrow-counterclockwise"></span></a>
+                        </sec:authorize>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service-box">
-                    <div class="service-ico">
-                        <span class="ico-circle"><i class="bi bi-bar-chart"></i></span>
-                    </div>
-                    <div class="service-content">
-                        <h2 class="s-title">Photography</h2>
-                        <p class="s-description text-center">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
-                            provident vitae! Magni
-                            tempora perferendis eum non provident.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service-box">
-                    <div class="service-ico">
-                        <span class="ico-circle"><i class="bi bi-binoculars"></i></span>
-                    </div>
-                    <div class="service-content">
-                        <h2 class="s-title">Responsive Design</h2>
-                        <p class="s-description text-center">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
-                            provident vitae! Magni
-                            tempora perferendis eum non provident.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service-box">
-                    <div class="service-ico">
-                        <span class="ico-circle"><i class="bi bi-brightness-high"></i></span>
-                    </div>
-                    <div class="service-content">
-                        <h2 class="s-title">Graphic Design</h2>
-                        <p class="s-description text-center">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
-                            provident vitae! Magni
-                            tempora perferendis eum non provident.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service-box">
-                    <div class="service-ico">
-                        <span class="ico-circle"><i class="bi bi-calendar4-week"></i></span>
-                    </div>
-                    <div class="service-content">
-                        <h2 class="s-title">Marketing Services</h2>
-                        <p class="s-description text-center">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
-                            provident vitae! Magni
-                            tempora perferendis eum non provident.
-                        </p>
-                    </div>
-                </div>
-            </div>
+            </c:forEach>
+
         </div>
+
     </div>
-</section><!-- End Services Section -->
+
+</section>
+<%@include file="../dynamic/footer.jspf" %>
+<!-- End Services Section -->
