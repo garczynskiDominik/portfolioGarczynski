@@ -60,7 +60,7 @@ public class TechnologiesController {
     }
 
     //delete
-    @RequestMapping(value = {"/deleteTechnologies"}, method = RequestMethod.POST)
+    @RequestMapping(value = {"/deleteTechnologies"}, method = {RequestMethod.GET, RequestMethod.POST})
     public RedirectView deleteTechnologies(@PathVariable("id") Long id) {
         technologiesRepository.deleteById(id);
         return new RedirectView("/technologies");

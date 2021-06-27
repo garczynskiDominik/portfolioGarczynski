@@ -44,7 +44,8 @@
                                     <h2 class="w-title">${title.title}</h2>
                                     <div class="w-more">
                                         <span class="w-ctegory">${title.category}</span> / <span
-                                            class="w-date">${title.date}</span>
+                                            class="w-date"><fmt:formatDate value="${title.date}"
+                                                                                         pattern="yyyy-MM-dd"/></span>
                                     </div>
                                 </div>
                                 <div class="col-sm-4">

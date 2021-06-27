@@ -14,9 +14,7 @@
 <section id="about" class="about-mf sect-pt4 route">
     <div class="container">
         <div class="row">
-
             <div class="col-sm-12">
-
                 <div class="box-shadow-full">
                     <sec:authorize access="hasRole('ADMIN')">
                         <c:forEach items="${about}" var="title">

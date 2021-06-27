@@ -9,13 +9,16 @@
 <%@include file="../dynamic/navBar.jspf" %>
 
 
-<!-- ======= About Section ======= -->
-<section id="about" class="about-mf sect-pt4 route">
+<section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route"
+         style="background-image: url(../resources/img/overlay-bg.jpg)">
+    <div class="overlay-mf"></div>
     <div class="container">
+
         <form name="send" method="post" action='<c:url value="/editAbout/${about.id}"/>'>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="box-shadow-full">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="contact-mf">
+                    <div id="contact" class="box-shadow-full">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="row">
@@ -131,9 +134,9 @@
                                     </div>
                                     </p>
                                     <p><span class="title-s">Address</span> <span><input class="form-control"
-                                                                                          type="text"
-                                                                                          name="address"
-                                                                                          value="${about.address}"></span>
+                                                                                         type="text"
+                                                                                         name="address"
+                                                                                         value="${about.address}"></span>
                                     </p>
                                     <p><span class="title-s">Facebook</span> <span><input class="form-control"
                                                                                           type="text"
@@ -158,17 +161,18 @@
                                 <input class="button button-a button-big button-rouded" type="submit" value="Save"
                                        id="searchButton"></input>
                             </div>
+                        </div>
 
-                            <%--                            <button type="submit" class="button button-a button-big button-rouded">Send Message</button>--%>
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </form>
-    </div>
-</section><!-- End About Section -->
+        </div>
 
+    </div>
+</section>
 
 <%@include file="../dynamic/footer.jspf" %>
+
+

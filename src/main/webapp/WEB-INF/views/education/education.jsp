@@ -1,8 +1,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
-<%@include file="../dynamic/css.jspf"%>
+<%@include file="../dynamic/css.jspf" %>
 <%@include file="../dynamic/navBar.jspf" %>
 
 <!-- ======= Blog Section ======= -->
@@ -12,110 +13,66 @@
             <div class="col-sm-12">
                 <div class="title-box text-center">
                     <h3 class="title-a">
-                        Blog
+                        Certifications and Education
+
                     </h3>
                     <p class="subtitle-a">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        My scientific achievements.
+
                     </p>
                     <div class="line-mf"></div>
                 </div>
             </div>
         </div>
+        <sec:authorize access="hasRole('ADMIN')">
+            <a href='<c:url value="/addEducation"/>' class="btn-right btn btn-secondary" role="button"><i
+                    class="bx bx-edit"></i>Add</a>
+        </sec:authorize>
+
+
         <div class="row">
-            <div class="col-md-4">
-                <div class="card card-blog">
-                    <div class="card-img">
-                        <a href="blog-single.html"><img src='<c:url value="/resources/img/post-1.jpg"/>' alt="" class="img-fluid"></a>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-category-box">
-                            <div class="card-category">
-                                <h6 class="category">Travel</h6>
+            <c:forEach items="${education}" var="edu">
+
+                <div class="col-md-4">
+                    <div class="card card-blog">
+                        <div class="card-img">
+                            <a href="blog-single.html"><img src="${edu.img}" alt=""
+                                                            class="img-fluid"></a>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-category-box">
+                                <div class="card-category">
+                                    <h6 class="category">${edu.type}</h6>
+                                </div>
                             </div>
+                            <h3 class="card-title"><a href="blog-single.html">${edu.nameOfSchool}l</a></h3>
+                            <sec:authorize access="hasRole('ADMIN')">
+                                <a href='<c:url value="/editEducation/${edu.id}"/>'> <span
+                                        class="bi bi-arrow-counterclockwise"></span></a>
+                            </sec:authorize>
+                            <p class="card-description">
+                                    ${edu.description}
+                            </p>
                         </div>
-                        <h3 class="card-title"><a href="blog-single.html">See more ideas about Travel</a></h3>
-                        <p class="card-description">
-                            Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis
-                            a pellentesque nec,
-                            egestas non nisi.
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="post-author">
-                            <a href="#">
-                                <img src='<c:url value="/resources/img/testimonial-2.jpg"/>' alt="" class="avatar rounded-circle">
-                                <span class="author">Morgan Freeman</span>
-                            </a>
-                        </div>
-                        <div class="post-date">
-                            <span class="bi bi-clock"></span> 10 min
+                        <div class="card-footer">
+                            <div class="post-author">
+                                <span class="bi bi-calendar-date"> Start: <fmt:formatDate value="${edu.dateStart}"
+                                                                                          pattern="yyyy"/></span>
+                            </div>
+                            <div class="post-date">
+                                <span class="bi bi-calendar-date">End: <fmt:formatDate value="${edu.dateEnd}"
+                                                                                       pattern="yyyy"/></span>
+                            </div>
+
+
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card card-blog">
-                    <div class="card-img">
-                        <a href="blog-single.html"><img src='<c:url value="/resources/img/post-2.jpg"/>' alt="" class="img-fluid"></a>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-category-box">
-                            <div class="card-category">
-                                <h6 class="category">Web Design</h6>
-                            </div>
-                        </div>
-                        <h3 class="card-title"><a href="blog-single.html">See more ideas about Travel</a></h3>
-                        <p class="card-description">
-                            Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis
-                            a pellentesque nec,
-                            egestas non nisi.
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="post-author">
-                            <a href="#">
-                                <img src='<c:url value="/resources/img/testimonial-2.jpg"/>' alt="" class="avatar rounded-circle">
-                                <span class="author">Morgan Freeman</span>
-                            </a>
-                        </div>
-                        <div class="post-date">
-                            <span class="bi bi-clock"></span> 10 min
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card card-blog">
-                    <div class="card-img">
-                        <a href="blog-single.html"><img src='<c:url value="/resources/img/post-3.jpg"/>' alt="" class="img-fluid"></a>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-category-box">
-                            <div class="card-category">
-                                <h6 class="category">Web Design</h6>
-                            </div>
-                        </div>
-                        <h3 class="card-title"><a href="blog-single.html">See more ideas about Travel</a></h3>
-                        <p class="card-description">
-                            Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis
-                            a pellentesque nec,
-                            egestas non nisi.
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="post-author">
-                            <a href="#">
-                                <img src='<c:url value="/resources/img/testimonial-2.jpg"/>' alt="" class="avatar rounded-circle">
-                                <span class="author">Morgan Freeman</span>
-                            </a>
-                        </div>
-                        <div class="post-date">
-                            <span class="bi bi-clock"></span> 10 min
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </c:forEach>
         </div>
+
+
     </div>
-</section><!-- End Blog Section -->
+</section>
+<!-- End Blog Section -->
 <%@include file="../dynamic/footer.jspf" %>
