@@ -84,11 +84,11 @@
                                 </div>
                                 <input class="button button-a button-big button-rouded" type="submit" value="Save"
                                        id="searchButton"></input>
-                                <form name="send" method="POST"
-                                      action='<c:url value="/deleteEducation/${education.id}"/>'>
-                                    <input type="submit" class="button button-b button-big button-rouded"
-                                           name="delete" value="Delete"/>
-                                </form>
+                            </form>
+                            <form name="send" method="POST"
+                                  action='<c:url value="/deleteEducation/${education.id}"/>'>
+                                <input type="submit" class="button button-b button-big button-rouded"
+                                       name="delete" value="Delete"/>
                             </form>
                         </div>
                     </div>

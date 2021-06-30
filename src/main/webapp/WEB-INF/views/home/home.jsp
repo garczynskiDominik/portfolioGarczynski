@@ -7,7 +7,8 @@
 
 
 <!-- ======= Hero Section ======= -->
-<div id="hero" class="hero route bg-image" style="background-image: url(/resources/img/hero-bg.jpg)">
+<div id="hero" class="hero route bg-image"
+     style="background-image: url(/resources/img/fire_black_background_2560x1600.jpg)">
     <div class="overlay-itro"></div>
     <div class="hero-content display-table">
         <div class="table-cell">

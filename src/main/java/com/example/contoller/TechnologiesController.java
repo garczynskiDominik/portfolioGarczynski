@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.view.RedirectView;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Controller
@@ -60,7 +61,8 @@ public class TechnologiesController {
     }
 
     //delete
-    @RequestMapping(value = {"/deleteTechnologies"}, method = {RequestMethod.GET, RequestMethod.POST})
+    @Transactional
+    @RequestMapping(value = {"/deleteTechnologies/{id}"}, method = {RequestMethod.GET, RequestMethod.POST})
     public RedirectView deleteTechnologies(@PathVariable("id") Long id) {
         technologiesRepository.deleteById(id);
         return new RedirectView("/technologies");

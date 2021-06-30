@@ -52,20 +52,17 @@
                                                             class="button button-a button-big button-rouded">
                                                         Save
                                                     </button>
-                                                    <form name="send" method="POST"
-                                                          action='<c:url value="/deleteTechnologies/${technologies.id}"/>'>
 
-                                                        <button type="submit"
-                                                                class="button button-b button-big button-rouded">
-                                                            Delete
-                                                        </button>
-
-                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                            </form>
+                            <form name="send" method="POST" action='<c:url value="/deleteTechnologies/${technologies.id}"/>'>
+                                <input type="submit" class="button button-b button-big button-rouded"
+                                       name="delete" value="Delete"/>
+
                             </form>
                         </div>
                     </div>

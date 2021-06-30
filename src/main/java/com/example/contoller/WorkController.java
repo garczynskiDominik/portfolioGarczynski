@@ -63,7 +63,7 @@ public class WorkController {
     }
 
     //delete
-//    @Transactional
+    @Transactional
     @RequestMapping(value = {"/deleteWork/{id}"}, method = {RequestMethod.GET, RequestMethod.POST})
     public RedirectView deleteWork(@PathVariable("id") Long id) {
         workRepository.deleteById(id);
