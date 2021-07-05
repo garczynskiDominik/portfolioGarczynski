@@ -9,12 +9,10 @@ import java.util.Optional;
 
 @Repository
 public interface EducationRepository extends JpaRepository<Education, Long> {
+
     Optional<Education> findById(Long id);
-
     List<Education> findAll();
-
     Education save(Education education);
-
     void deleteById(Long id);
 
 }

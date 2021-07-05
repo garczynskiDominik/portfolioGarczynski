@@ -25,7 +25,6 @@ public class TechnologiesServices {
                 technologies.getDescription(),
                 technologies.getLogo()
         );
-
         technologiesRepository.save(edit);
     }
 

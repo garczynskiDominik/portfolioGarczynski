@@ -15,10 +15,4 @@ public class Login {
     public String postLogin() {
         return "/login/login";
     }
-
-
-//    @RequestMapping(value = {"/login"}, method = RequestMethod.POST)
-//    public String setLogin() {
-//        return "/login/login";
-//    }
 }

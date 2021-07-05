@@ -45,7 +45,6 @@ public class EducationController {
     public RedirectView addEducation(@ModelAttribute Education education) {
         educationRepository.save(education);
         return new RedirectView("/education");
-
     }
 
     //edit post

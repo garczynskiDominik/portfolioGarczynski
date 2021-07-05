@@ -11,10 +11,7 @@ import java.util.Optional;
 public interface WorkRepository extends JpaRepository<Work, Long> {
 
     Optional<Work> findById(Long id);
-
     Work save(Work work);
-
     List<Work> findAll();
-
     void deleteById(Long id);
 }

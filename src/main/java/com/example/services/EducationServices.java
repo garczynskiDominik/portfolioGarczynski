@@ -26,10 +26,8 @@ public class EducationServices {
                 education.getDateStart(),
                 education.getDateEnd(),
                 education.getImg()
-
         );
 
         educationRepository.save(edit);
-
     }
 }

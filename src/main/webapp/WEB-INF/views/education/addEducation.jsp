@@ -57,7 +57,7 @@
                                                            type="date"
                                                            name="dateEnd"
                                                            max="3000-12-31"
-                                                           ></span>
+                                                    ></span>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">

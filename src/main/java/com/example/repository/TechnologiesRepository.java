@@ -11,10 +11,7 @@ public interface TechnologiesRepository extends JpaRepository<Technologies, Long
 
 
     Optional<Technologies> findById(Long id);
-
     List<Technologies> findAll();
-
     Technologies save(Technologies technologies);
-
     void deleteById(Long id);
 }

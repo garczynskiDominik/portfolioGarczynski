@@ -18,7 +18,6 @@ public class HomeController {
         this.aboutRepository = aboutRepository;
     }
 
-    //get contact
     @RequestMapping(value = {"/home", "/"}, method = RequestMethod.GET)
     public String getHome(Model model) {
         List<About> list = aboutRepository.findAll();

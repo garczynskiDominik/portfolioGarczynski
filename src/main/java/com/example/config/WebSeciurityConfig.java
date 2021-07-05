@@ -24,7 +24,6 @@ public class WebSeciurityConfig extends WebSecurityConfigurerAdapter {
                 .withUser("user").password("user").roles("USER")
                 .and()
                 .withUser("admin").password("admin").roles("ADMIN");
-
     }
 
     @Override
@@ -32,7 +31,7 @@ public class WebSeciurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/editAbout/**", "/editWork/**", "/editTechnologies/**")
                 .hasAnyAuthority("ROLE_ADMIN")
-                .antMatchers("/", "/index", "/about", "/education", "/home", "/work","/technologies", "/contact")
+                .antMatchers("/", "/index", "/about", "/education", "/home", "/work", "/technologies", "/contact")
                 .hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
                 .and()
                 .csrf().disable()
@@ -48,9 +47,6 @@ public class WebSeciurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .logout()
                 .logoutSuccessUrl("/home");
-
     }
-
-
 }
 
