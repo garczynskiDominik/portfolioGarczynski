@@ -27,13 +27,13 @@
                                         <div class="col-md-12 mb-3">
                                             <div class="form-group">
                                                 <input type="text" name="username" class="form-control" id="username"
-                                                       placeholder="default: user, for extra option: admin" required>
+                                                       placeholder="user" required>
                                             </div>
                                         </div>
                                         <div class="col-md-12 mb-3">
                                             <div class="form-group">
                                                 <input type="password" class="form-control" name="password"
-                                                       id="password" placeholder="default: user, for extra option: admin" required>
+                                                       id="password" placeholder="user" required>
                                             </div>
                                         </div>
                                         <input type="submit" class="button button-a button-big button-rouded"
