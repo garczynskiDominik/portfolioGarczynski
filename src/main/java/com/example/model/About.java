@@ -21,6 +21,7 @@ public class About {
     private String profile;
     private String email;
     private Integer number;
+    @Column(length = 5000)
     private String aboutMe;
     private Integer java;
     private Integer git;
