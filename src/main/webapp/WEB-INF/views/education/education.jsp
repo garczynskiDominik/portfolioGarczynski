@@ -45,7 +45,7 @@
                                     <h6 class="category">${edu.type}</h6>
                                 </div>
                             </div>
-                            <h3 class="card-title"><a href="blog-single.html">${edu.nameOfSchool}l</a></h3>
+                            <h3 class="card-title"><a href="blog-single.html">${edu.nameOfSchool}</a></h3>
                             <sec:authorize access="hasRole('ADMIN')">
                                 <a href='<c:url value="/editEducation/${edu.id}"/>'> <span
                                         class="bi bi-arrow-counterclockwise"></span></a>
