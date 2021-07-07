@@ -36,7 +36,6 @@
 
             </ul>
             <i class="bi mobile-nav-toggle bi-list">
-                ::before
             </i>
         </nav><!-- .navbar -->
 
