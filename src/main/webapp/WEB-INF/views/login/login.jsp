@@ -52,7 +52,7 @@
 
                                 <div class="more-info">
                                     <p class="lead">
-                                        My name is Dominik....
+                                        My name is Dominik... This webapplication shows my achievements so far. After logging in as an administrator, the user can modify each tab. Everything is connected to the Postgres database.
                                     </p>
                                     <ul class="list-ico">
                                         <li><span class="bi bi-geo-alt"></span> Rzeszów</li>
