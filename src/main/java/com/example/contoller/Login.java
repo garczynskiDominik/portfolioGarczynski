@@ -15,4 +15,9 @@ public class Login {
     public String postLogin() {
         return "/login/login";
     }
+
+    @RequestMapping(value = {"/register"}, method = RequestMethod.GET)
+    public String getRegister() {
+        return "/login/register";
+    }
 }

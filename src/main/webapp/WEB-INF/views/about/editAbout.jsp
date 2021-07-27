@@ -13,7 +13,6 @@
          style="background-image: url(../resources/img/overlay-bg.jpg)">
     <div class="overlay-mf"></div>
     <div class="container">
-
         <form name="send" method="post" action='<c:url value="/editAbout/${about.id}"/>'>
             <div class="row">
                 <div class="col-sm-12">
@@ -27,8 +26,6 @@
                                                 <img SRC="${about.img}"
                                                      width="150" height="200">
                                                 </br>
-
-
                                             </div>
                                             <input class="form-control"
                                                    type="text"
@@ -64,7 +61,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="col-xl-12 col-md-12 mb-12">
                                         <div class="card shadow mb-4">
                                             <div class="card-header py-3">
@@ -75,36 +71,26 @@
                                                         <input class="form-control" type="text" name="java"
                                                                value="${about.java}">
                                                     </div>
-
-
                                                     <div class="col-2">
                                                         <label class="col-form-label">Git</label>
                                                         <input class="form-control" type="text" name="git"
                                                                value="${about.git}">
                                                     </div>
-
-
                                                     <div class="col-2">
                                                         <label class="col-form-label">Hibernate</label>
                                                         <input class="form-control" type="text" name="hibernate"
                                                                value="${about.hibernate}">
                                                     </div>
-
-
                                                     <div class="col-2">
                                                         <label class="col-form-label">Spring</label>
                                                         <input class="form-control" type="text" name="spring"
                                                                value="${about.spring}">
                                                     </div>
-
-
                                                     <div class="col-2">
                                                         <label class="col-form-label">SQL</label>
                                                         <input class="form-control" type="text" name="mySql"
                                                                value="${about.mySql}">
                                                     </div>
-
-
                                                     <div class="col-2">
                                                         <label class="col-form-label">HTML/CSS</label>
                                                         <input class="form-control" type="text" name="htmlCss"
@@ -115,8 +101,6 @@
                                                         <input class="form-control" type="text" name="JavaScript"
                                                                value="${about.javaScript}">
                                                     </div>
-
-
                                                 </div>
                                             </div>
                                         </div>
@@ -155,23 +139,18 @@
                                                                                               name="linkedin"
                                                                                               value="${about.linkedin}"></span>
                                         </p>
-
                                     </div>
-
                                 </div>
                                 <div class="col-10">
                                     <input class="button button-a button-big button-rouded" type="submit" value="Save"
                                            id="searchButton"></input>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </form>
-    </div>
-
     </div>
 </section>
 

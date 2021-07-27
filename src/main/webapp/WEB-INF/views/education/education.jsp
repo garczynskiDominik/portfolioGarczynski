@@ -6,15 +6,14 @@
 <%@include file="../dynamic/css.jspf" %>
 <%@include file="../dynamic/navBar.jspf" %>
 
-<!-- ======= Blog Section ======= -->
-<section id="blog" class="blog-mf sect-pt4 route">
+
+<section id="blog" class="paralax-mf footer-paralax bg-image sect-mt4 route">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
                 <div class="title-box text-center">
                     <h3 class="title-a">
                         Certifications and Education
-
                     </h3>
                     <p class="subtitle-a">
                         My scientific achievements.
@@ -28,16 +27,13 @@
             <a href='<c:url value="/addEducation"/>' class="btn-right btn btn-secondary" role="button"><i
                     class="bx bx-edit"></i>Add</a>
         </sec:authorize>
-
-
         <div class="row">
             <c:forEach items="${education}" var="edu">
-
                 <div class="col-md-4">
                     <div class="card card-blog">
                         <div class="card-img">
-                            <a href="blog-single.html"><img src="${edu.img}" alt=""
-                                                            class="img-fluid"></a>
+                            <img src="${edu.img}" alt=""
+                                                            class="img-fluid">
                         </div>
                         <div class="card-body">
                             <div class="card-category-box">
@@ -45,7 +41,7 @@
                                     <h6 class="category">${edu.type}</h6>
                                 </div>
                             </div>
-                            <h3 class="card-title"><a href="blog-single.html">${edu.nameOfSchool}</a></h3>
+                            <h3 class="card-title">${edu.nameOfSchool}</h3>
                             <sec:authorize access="hasRole('ADMIN')">
                                 <a href='<c:url value="/editEducation/${edu.id}"/>'> <span
                                         class="bi bi-arrow-counterclockwise"></span></a>
@@ -63,16 +59,12 @@
                                 <span class="bi bi-calendar-date">End: <fmt:formatDate value="${edu.dateEnd}"
                                                                                        pattern="yyyy"/></span>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
             </c:forEach>
         </div>
-
-
     </div>
 </section>
-<!-- End Blog Section -->
+
 <%@include file="../dynamic/footer.jspf" %>

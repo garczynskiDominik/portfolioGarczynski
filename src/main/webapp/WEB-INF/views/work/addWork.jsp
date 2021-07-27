@@ -3,13 +3,10 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
-
 <%@include file="../dynamic/css.jspf" %>
 <body>
 <%@include file="../dynamic/navBar.jspf" %>
 
-
-<!-- ======= About Section ======= -->
 <section id="about" class="about-mf sect-pt4 route">
     <div class="container">
         <form name="send" method="post" action='<c:url value="/addWork"/>'>
@@ -53,19 +50,14 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <form name="send" method="POST" action='<c:url value="/addWork"/>'>
                     <input class="button button-a button-big button-rouded" type="submit" value="Save"
                            id="searchButton"></input>
                     </form>
-
                     </div>
-
                 </div>
-            </div>
-
         </form>
     </div>
 </section><!-- End About Section -->

@@ -9,8 +9,6 @@
 <body>
 <%@include file="../dynamic/navBar.jspf" %>
 
-
-<!-- ======= About Section ======= -->
 <section id="about" class="about-mf sect-pt4 route">
     <div class="container">
         <div class="row">
@@ -32,20 +30,14 @@
                                                  width="150" height="200">
                                         </div>
                                     </div>
-
-
                                     <div class="col-sm-6 col-md-7">
                                         <div class="about-info">
-
                                             <p><span class="title-s">Name: </span> <span>${title.name}</span></p>
                                             <p><span class="title-s">Profile: </span> <span>${title.profile}</span></p>
                                             <p><span class="title-s">Email: </span> <span>${title.email}</span></p>
                                             <p><span class="title-s">Phone: </span> <span>${title.number}</span></p>
-
                                         </div>
                                     </div>
-
-
                                 </div>
                                 <div class="skill-mf">
                                     <p class="title-s">Skill</p>
@@ -81,8 +73,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
                             <div class="col-md-6">
                                 <div class="about-me pt-4 pt-md-0">
                                     <div class="title-box-2">
@@ -93,18 +83,14 @@
                                     <p class="lead">
                                             ${title.aboutMe}
                                     </p>
-
                                 </div>
                             </div>
                         </div>
                     </c:forEach>
-
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 <%@include file="../dynamic/footer.jspf" %>
 
-<!-- End About Section -->

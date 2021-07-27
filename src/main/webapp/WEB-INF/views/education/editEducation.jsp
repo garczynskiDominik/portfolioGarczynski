@@ -30,9 +30,7 @@
                                                                 <img SRC="${education.img}"
                                                                      width="150" height="200">
                                                                 </br>
-
                                                             </div>
-
                                                             <input class="form-control"
                                                                    type="text"
                                                                    name="img"
@@ -98,6 +96,5 @@
     </div>
     </div>
 </section>
-
 
 <%@include file="../dynamic/footer.jspf" %>

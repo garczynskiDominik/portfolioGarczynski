@@ -2,10 +2,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 
-
-
 <%@include file="../dynamic/css.jspf" %>
-<!-- ======= Contact Section ======= -->
+
 <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route"
          style="background-image: url(../resources/img/overlay-bg.jpg)">
     <div class="overlay-mf"></div>
@@ -21,27 +19,25 @@
                                         Login
                                     </h5>
                                 </div>
-
                                 <form method="post" action='<c:url value="/login"/>'>
                                     <div>
                                         <div class="col-md-12 mb-3">
                                             <div class="form-group">
-                                                <input type="text" name="username" class="form-control" id="username"
-                                                       placeholder="user" required>
+                                                <input type="text" name="username" class="form-control" placeholder="user" required>
                                             </div>
                                         </div>
                                         <div class="col-md-12 mb-3">
                                             <div class="form-group">
-                                                <input type="password" class="form-control" name="password"
-                                                       id="password" placeholder="user" required>
+                                                <input type="password" class="form-control" name="password" placeholder="user" required>
                                             </div>
                                         </div>
                                         <input type="submit" class="button button-a button-big button-rouded"
                                                value="Login">
                                     </div>
+
                                 </form>
-
-
+                                <a href='<c:url value="/register"/>' class="button button-a button-big button-rouded" role="button"><i
+                                        class="bx bx-edit"></i>Register</a>
                             </div>
                             <div class="col-md-6">
                                 <div class="title-box-2 pt-4 pt-md-0">
@@ -49,10 +45,11 @@
                                         Hello this is my portfolio
                                     </h5>
                                 </div>
-
                                 <div class="more-info">
                                     <p class="lead">
-                                        My name is Dominik...  This webapplication shows my achievements so far. After loggin as admin role the user will have extra options add, modify, delete data in every each one tab. Everything is connected to the Postgres database.
+                                        My name is Dominik... This webapplication shows my achievements so far. After
+                                        loggin as admin role the user will have extra options add, modify, delete data
+                                        in every each one tab. Everything is connected to the Postgres database.
                                     </p>
                                     <ul class="list-ico">
                                         <li><span class="bi bi-geo-alt"></span> Rzeszów</li>
@@ -66,12 +63,13 @@
                                                 class="bi bi-facebook"></i></span></a></li>
                                         <li><a href="https://github.com/garczynskiDominik"><span class="ico-circle"><i
                                                 class="bi bi-github"></i></span></a></li>
-                                        <li><a href="https://www.linkedin.com/in/dominik-garczy%C5%84ski-84139a12a/"><span class="ico-circle"><i
-                                                class="bi bi-linkedin"></i></span></a></li>
+                                        <li>
+                                            <a href="https://www.linkedin.com/in/dominik-garczy%C5%84ski-84139a12a/"><span
+                                                    class="ico-circle"><i
+                                                    class="bi bi-linkedin"></i></span></a></li>
                                     </ul>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -79,5 +77,5 @@
         </div>
     </div>
 </section>
-<!-- End Contact Section -->
+
 <%@include file="../dynamic/footer.jspf" %>

@@ -1,5 +1,6 @@
 package com.example.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -9,27 +10,34 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import javax.sql.DataSource;
+
 @Configuration
 @EnableWebSecurity
 public class WebSeciurityConfig extends WebSecurityConfigurerAdapter {
+
+    private final DataSource dataSource;
+
+    public WebSeciurityConfig(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
 
     @Bean
     protected PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication()
-                .withUser("user").password("user").roles("USER")
-                .and()
-                .withUser("admin").password("portfolio").roles("ADMIN");
+    @Autowired
+    public void configAuthentication(AuthenticationManagerBuilder auth) throws Exception {
+        auth.jdbcAuthentication().dataSource(dataSource)
+                .usersByUsernameQuery("select username,password,enable from users where username=?")
+                .authoritiesByUsernameQuery("select username, role from users where username=?");
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/editAbout/**", "/editWork/**", "/editTechnologies/**")
+                .antMatchers("/editAbout/**", "/editWork/**", "/editTechnologies/**", "/editEducation/**")
                 .hasAnyAuthority("ROLE_ADMIN")
                 .antMatchers("/", "/index", "/about", "/education", "/home", "/work", "/technologies", "/contact")
                 .hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")

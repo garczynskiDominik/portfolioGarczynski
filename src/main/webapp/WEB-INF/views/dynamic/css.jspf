@@ -21,5 +21,4 @@
 
     <!-- Template Main CSS File -->
     <link href='<c:url value="/resources/css/style.css"/>' rel="stylesheet">
-
 </head>

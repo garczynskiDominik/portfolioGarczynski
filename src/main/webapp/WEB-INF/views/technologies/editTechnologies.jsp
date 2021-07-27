@@ -5,7 +5,7 @@
 
 <%@include file="../dynamic/css.jspf" %>
 <%@include file="../dynamic/navBar.jspf" %>
-<!-- ======= Contact Section ======= -->
+
 <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route"
          style="background-image: url(/resources/img/overlay-bg.jpg)">
     <div class="overlay-mf"></div>
@@ -15,8 +15,6 @@
                 <div class="contact-mf">
                     <div id="contact" class="box-shadow-full">
                         <div class="row">
-
-
                             <form action='<c:url value="/editTechnologies/${id}"/>' method="post" name="send">
                                 <div class="row">
                                     <div class="col-md-6">
@@ -26,7 +24,6 @@
                                             </h5>
                                         </div>
                                         <div>
-
                                             <div class="row">
                                                 <div class="col-md-12 mb-3">
                                                     <div class="form-group">
@@ -52,7 +49,6 @@
                                                             class="button button-a button-big button-rouded">
                                                         Save
                                                     </button>
-
                                                 </div>
                                             </div>
                                         </div>
@@ -62,7 +58,6 @@
                             <form name="send" method="POST" action='<c:url value="/deleteTechnologies/${technologies.id}"/>'>
                                 <input type="submit" class="button button-b button-big button-rouded"
                                        name="delete" value="Delete"/>
-
                             </form>
                         </div>
                     </div>
@@ -71,5 +66,5 @@
         </div>
     </div>
 </section>
-<!-- End Contact Section -->
+
 <%@include file="../dynamic/footer.jspf" %>

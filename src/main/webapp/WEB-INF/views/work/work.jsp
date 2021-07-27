@@ -6,8 +6,8 @@
 <%@include file="../dynamic/navBar.jspf" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
-<!-- ======= Portfolio Section ======= -->
-<section id="work" class="portfolio-mf sect-pt4 route">
+
+<section id="work" class="paralax-mf footer-paralax bg-image sect-mt4 route">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -28,7 +28,6 @@
                     class="bx bx-edit"></i>Add</a>
         </sec:authorize>
         <div class="row">
-
             <c:forEach items="${work}" var="title">
                 <div class="col-md-4">
                     <div class="work-box">
@@ -57,9 +56,7 @@
                                             <a href='<c:url value="/editWork/${title.id}"/>'> <span
                                                     class="bi bi-arrow-counterclockwise"></span></a>
                                         </sec:authorize>
-
                                     </div>
-                                        <%--                                                                            <div class="w-like">--%>
                                 </div>
                             </div>
                         </div>
@@ -69,5 +66,5 @@
         </div>
     </div>
 </section>
-<!-- End Portfolio Section -->
+
 <%@include file="../dynamic/footer.jspf" %>

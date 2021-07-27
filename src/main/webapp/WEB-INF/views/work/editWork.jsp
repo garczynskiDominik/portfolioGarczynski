@@ -3,11 +3,9 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
-
 <%@include file="../dynamic/css.jspf" %>
 <body>
 <%@include file="../dynamic/navBar.jspf" %>
-
 
 <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route"
          style="background-image: url(/resources/img/overlay-bg.jpg)">
@@ -18,7 +16,6 @@
                 <div class="contact-mf">
                     <div id="contact" class="box-shadow-full">
                         <div class="row">
-
                             <form name="send" method="post" action='<c:url value="/editWork/${id}"/>'>
                                 <div class="row">
                                     <div class="col-sm-12">
@@ -31,10 +28,7 @@
                                                                 <img SRC="${work.img}"
                                                                      width="150" height="200">
                                                                 </br>
-
-
                                                             </div>
-
                                                             <input class="form-control"
                                                                    type="text"
                                                                    name="img"
@@ -72,14 +66,10 @@
 
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
-
-
                                 <input class="button button-a button-big button-rouded" type="submit" value="Save"
                                        id="searchButton"></input>
-
                             </form>
                             <form name="send" method="POST" action='<c:url value="/deleteWork/${work.id}"/>'>
                                 <input type="submit" class="button button-b button-big button-rouded"
@@ -93,6 +83,5 @@
     </div>
     </div>
 </section>
-
 
 <%@include file="../dynamic/footer.jspf" %>

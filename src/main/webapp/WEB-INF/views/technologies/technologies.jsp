@@ -4,12 +4,9 @@
 <%@include file="../dynamic/css.jspf" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
-
 <%@include file="../dynamic/navBar.jspf" %>
 
-
-<!-- ======= Services Section ======= -->
-<section id="services" class="services-mf pt-5 route">
+<section id="services" class="paralax-mf footer-paralax bg-image sect-mt4 route">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -28,8 +25,6 @@
             <a href='<c:url value="/addTechnologies"/>' class="btn-right btn btn-secondary" role="button"><i
                     class="bx bx-edit"></i>Add</a>
         </sec:authorize>
-
-
         <div class="row">
             <c:forEach items="${technologies}" var="techno">
                 <div class="col-md-4">
@@ -50,11 +45,8 @@
                     </div>
                 </div>
             </c:forEach>
-
         </div>
-
     </div>
-
 </section>
+
 <%@include file="../dynamic/footer.jspf" %>
-<!-- End Services Section -->

@@ -6,7 +6,7 @@
 <%@include file="../dynamic/css.jspf" %>
 <%@include file="../dynamic/navBar.jspf" %>
 
-<!-- ======= Contact Section ======= -->
+
 <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route"
          style="background-image: url(../resources/img/overlay-bg.jpg)">
     <div class="overlay-mf"></div>
@@ -40,7 +40,6 @@
                                                            id="description"
                                                            placeholder="enter description" required>
                                                 </div>
-
                                             </div>
                                             <div class="col-md-12 mb-3">
                                                 <div class="form-group">
@@ -82,5 +81,5 @@
         </div>
     </div>
 </section>
-<!-- End Contact Section -->
+
 <%@include file="../dynamic/footer.jspf" %>

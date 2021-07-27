@@ -6,9 +6,8 @@
 <%@include file="../dynamic/navBar.jspf" %>
 
 
-<!-- ======= Hero Section ======= -->
 <div id="hero" class="hero route bg-image"
-     style="background-image: url(/resources/img/fire_black_background_2560x1600.jpg)">
+     style=" background-position: unset;background-image: url(/resources/img/fire_black_background_2560x1600.jpg)">
     <div class="overlay-itro"></div>
     <div class="hero-content display-table">
         <div class="table-cell">
@@ -19,11 +18,10 @@
                     <p class="hero-subtitle"><span class="typed"
                                                    data-typed-items="Designer, Developer, Freelancer, Photographer"></span>
                     </p>
-
                     </p>
                 </div>
             </c:forEach>
         </div>
     </div>
 </div>
-<!-- End Hero Section -->
+
