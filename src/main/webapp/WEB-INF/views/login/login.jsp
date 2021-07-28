@@ -23,12 +23,14 @@
                                     <div>
                                         <div class="col-md-12 mb-3">
                                             <div class="form-group">
-                                                <input type="text" name="username" class="form-control" placeholder="user" required>
+                                                <input type="text" name="username" class="form-control"
+                                                       placeholder="user" required>
                                             </div>
                                         </div>
                                         <div class="col-md-12 mb-3">
                                             <div class="form-group">
-                                                <input type="password" class="form-control" name="password" placeholder="user" required>
+                                                <input type="password" class="form-control" name="password"
+                                                       placeholder="user" required>
                                             </div>
                                         </div>
                                         <input type="submit" class="button button-a button-big button-rouded"
@@ -36,7 +38,13 @@
                                     </div>
 
                                 </form>
-                                <a href='<c:url value="/register"/>' class="button button-a button-big button-rouded" role="button"><i
+                                <p class="lead">
+                                    If you don't have account on my portfolio web app, please register to check how
+                                    working my code.
+                                    Default i give you role USER. Admin can more... Code have all CRUD functions
+                                </p>
+                                <a href='<c:url value="/register"/>' class="button button-a button-big button-rouded"
+                                   role="button"><i
                                         class="bx bx-edit"></i>Register</a>
                             </div>
                             <div class="col-md-6">

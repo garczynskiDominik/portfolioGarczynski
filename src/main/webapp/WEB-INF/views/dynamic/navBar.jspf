@@ -9,7 +9,7 @@
     <div class="container d-flex align-items-center justify-content-between">
         <h1 class="logo"><a href='<c:url value="/"/>'>Portfolio</a></h1>
         <nav id="navbar" class="navbar">
-            <ul>.
+            <ul>
                 <li><a class="nav-link scrollto" href='<c:url value="/home"/>'>Home</a></li>
                 <li><a class="nav-link scrollto" href='<c:url value="/about"/>'>About</a></li>
                 <li><a class="nav-link scrollto" href='<c:url value="/technologies"/>'>Technologies</a></li>
