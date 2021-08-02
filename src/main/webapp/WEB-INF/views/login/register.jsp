@@ -36,7 +36,7 @@
                                         <div class="col-md-12 mb-3">
                                             <div class="form-group">
                                                 <input type="text" class="form-control" name="company"
-                                                       id="company" placeholder="Please enter compnay name" required>
+                                                       id="company" placeholder="Please enter company name" required>
                                             </div>
                                         </div>
                                         <input type="submit" class="button button-a button-big button-rouded"

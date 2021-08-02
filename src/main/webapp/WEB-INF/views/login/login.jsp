@@ -30,7 +30,7 @@
                                         <div class="col-md-12 mb-3">
                                             <div class="form-group">
                                                 <input type="password" class="form-control" name="password"
-                                                       placeholder="user" required>
+                                                       placeholder="password" required>
                                             </div>
                                         </div>
                                         <input type="submit" class="button button-a button-big button-rouded"
@@ -41,7 +41,7 @@
                                 <p class="lead">
                                     If you don't have account on my portfolio web app, please register to check how
                                     working my code.
-                                    Default i give you role USER. Admin can more... Code have all CRUD functions
+                                    Default i give you role USER. ADMIN can more... Code have all CRUD functions
                                 </p>
                                 <a href='<c:url value="/register"/>' class="button button-a button-big button-rouded"
                                    role="button"><i
@@ -55,9 +55,9 @@
                                 </div>
                                 <div class="more-info">
                                     <p class="lead">
-                                        My name is Dominik... This webapplication shows my achievements so far. After
-                                        loggin as admin role the user will have extra options add, modify, delete data
-                                        in every each one tab. Everything is connected to the Postgres database.
+                                        My name is Dominik... This web application shows my achievements so far.
+                                        After logging in as admin, the user will have additional options to add, modify,
+                                        delete data in each one of the tabs. Everything is connected to the Postgres database.
                                     </p>
                                     <ul class="list-ico">
                                         <li><span class="bi bi-geo-alt"></span> Rzeszów</li>

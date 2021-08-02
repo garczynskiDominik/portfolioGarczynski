@@ -18,7 +18,7 @@
                             <div class="col-md-6">
                                 <div class="title-box-2">
                                     <h5 class="title-left">
-                                        Send Message to me
+                                        Message me
                                     </h5>
                                 </div>
                                 <div>
