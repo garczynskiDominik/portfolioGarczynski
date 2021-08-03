@@ -1,16 +1,23 @@
 package com.example.services;
 
+import com.example.DTO.AboutDto;
+import com.example.DTO.converters.AboutConverter;
 import com.example.model.About;
 import com.example.repository.AboutRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
+
+import java.util.List;
 
 @Service
 public class AboutServices {
 
     private final AboutRepository aboutRepository;
+    private final AboutConverter aboutConverter;
 
-    public AboutServices(AboutRepository aboutRepository) {
+    public AboutServices(AboutRepository aboutRepository, AboutConverter aboutConverter) {
         this.aboutRepository = aboutRepository;
+        this.aboutConverter = aboutConverter;
     }
 
     public About getAbout(Long id) {
@@ -39,7 +46,11 @@ public class AboutServices {
                 about.getLinkedin());
         aboutRepository.save(edit);
         System.out.println("adding person on id:" + edit.getId());
-
     }
 
+    public void getAbouts(Model model) {
+        List<About> list = aboutRepository.findAll();
+        List<AboutDto> aboutDtos = aboutConverter.entityToDto(list);
+        model.addAttribute("about", aboutDtos);
+    }
 }

@@ -17,15 +17,12 @@ public class ContactController {
         this.aboutRepository = aboutRepository;
     }
 
-    //get contact
     @RequestMapping(value = {"/contact"}, method = RequestMethod.GET)
     public String getAboutsforContact(Model model) {
         List<About> list = aboutRepository.findAll();
         model.addAttribute("about", list);
         return "contactSection/contact";
     }
-
-
 }
 
 

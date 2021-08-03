@@ -60,7 +60,5 @@
                 </div>
         </form>
     </div>
-</section><!-- End About Section -->
-
-
+</section>
 <%@include file="../dynamic/footer.jspf" %>

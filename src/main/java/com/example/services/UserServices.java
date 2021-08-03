@@ -1,6 +1,6 @@
 package com.example.services;
 
-import com.example.DTO.UserConverter;
+import com.example.DTO.converters.UserConverter;
 import com.example.DTO.UsersDto;
 import com.example.model.Users;
 import com.example.repository.UserRepository;

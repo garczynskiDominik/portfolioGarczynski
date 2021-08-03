@@ -1,5 +1,6 @@
-package com.example.DTO;
+package com.example.DTO.converters;
 
+import com.example.DTO.UsersDto;
 import com.example.model.Users;
 import org.springframework.stereotype.Component;
 

@@ -26,28 +26,23 @@ public class WorkController {
     }
 
 
-    //get all
     @RequestMapping(value = {"/work"}, method = RequestMethod.GET)
     public String getWork(Model model) {
-        List<Work> list = workRepository.findAll();
-        model.addAttribute("work", list);
+        workServices.getWorks(model);
         return "work/work";
     }
 
-    //add
     @RequestMapping(value = {"/addWork"}, method = RequestMethod.GET)
     public String getAddWork() {
         return "work/addWork";
     }
 
-    //add
     @RequestMapping(value = {"/addWork"}, method = RequestMethod.POST)
     public RedirectView addWork(@ModelAttribute Work work) {
         workRepository.save(work);
         return new RedirectView("/work");
     }
 
-    //edit post
     @RequestMapping(value = {"/editWork/{id}"}, method = RequestMethod.POST)
     public RedirectView saveEditWork(@ModelAttribute Work work, @PathVariable("id") Long id) {
         workServices.editWork(work, id);
@@ -55,16 +50,14 @@ public class WorkController {
 
     }
 
-    //edit get
     @RequestMapping(value = {"/editWork/{id}"}, method = RequestMethod.GET)
     public String getEditWork(Model model, @PathVariable("id") Long id) {
         model.addAttribute("work", workServices.getWork(id));
         return "work/editWork";
     }
 
-    //delete
     @Transactional
-    @RequestMapping(value = {"/deleteWork/{id}"}, method = {RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(value = {"/deleteWork/{id}"}, method = {RequestMethod.POST})
     public RedirectView deleteWork(@PathVariable("id") Long id) {
         workRepository.deleteById(id);
         return new RedirectView("/work");

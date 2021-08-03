@@ -26,44 +26,38 @@ public class EducationController {
         this.educationServices = educationServices;
     }
 
-    //get all
     @RequestMapping(value = {"/education"}, method = RequestMethod.GET)
     public String getEducation(Model model) {
-        List<Education> listEducations = educationRepository.findAll();
-        model.addAttribute("education", listEducations);
+        educationServices.getAllEucations(model);
         return "education/education";
     }
 
-    //add get
     @RequestMapping(value = {"addEducation"}, method = RequestMethod.GET)
     public String getAddTEducation() {
         return "education/addEducation";
     }
 
-    //add post
+
     @RequestMapping(value = {"addEducation"}, method = RequestMethod.POST)
-    public RedirectView addEducation(@ModelAttribute Education education) {
+    public RedirectView postAddEducation(@ModelAttribute Education education) {
         educationRepository.save(education);
         return new RedirectView("/education");
     }
 
-    //edit post
     @RequestMapping(value = {"/editEducation/{id}"}, method = RequestMethod.POST)
-    public RedirectView saveEditEducation(@ModelAttribute Education education, @PathVariable("id") Long id) {
+    public RedirectView postEditEducation(@ModelAttribute Education education, @PathVariable("id") Long id) {
         educationServices.editEducation(education, id);
         return new RedirectView("/education");
     }
 
-    //edit get
     @RequestMapping(value = {"/editEducation/{id}"}, method = RequestMethod.GET)
     public String getEditEducation(Model model, @PathVariable("id") Long id) {
         model.addAttribute("education", educationServices.getEducation(id));
         return "education/editEducation";
     }
 
-    //delete
     @Transactional
-    @RequestMapping(value = {"/deleteEducation/{id}"}, method = {RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(value = {"/deleteEducation/{id}"}, method = {RequestMethod.POST})
     public RedirectView deleteEducation(@PathVariable("id") Long id) {
         educationRepository.deleteById(id);
         return new RedirectView("/education");

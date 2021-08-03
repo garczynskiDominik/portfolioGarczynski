@@ -13,7 +13,6 @@
         <div class="table-cell">
             <c:forEach items="${about}" var="title">
                 <div class="container">
-                    <!--<p class="display-6 color-d">Hello, world!</p>-->
                     <h1 class="hero-title mb-4">I am ${title.name}</h1>
                     <p class="hero-subtitle"><span class="typed"
                                                    data-typed-items="Designer, Developer, Freelancer, Photographer"></span>
