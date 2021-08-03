@@ -9,9 +9,10 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
 
+
     <!-- Favicons -->
-    <link href='<c:url value="/resources/img/favicon.png"/>' rel="icon">
-    <link href='<c:url value="/resources/img/apple-touch-icon.png"/>' rel="apple-touch-icon">
+    <link href='<c:url value="/resources/img/dg/logo2.png"/>' rel="icon">
+    <link href='<c:url value="/resources/img//dg/logo1"/>' rel="apple-touch-icon">
 
     <!-- Vendor CSS Files -->
     <link href='<c:url value="/resources/vendor/bootstrap/css/bootstrap.min.css"/>' rel="stylesheet">
