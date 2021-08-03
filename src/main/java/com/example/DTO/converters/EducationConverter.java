@@ -19,7 +19,6 @@ public class EducationConverter {
         education.setType(education.getType());
         educationDto.setDateStart(education.getDateStart());
         educationDto.setDateEnd(education.getDateEnd());
-        educationDto.setImg(education.getImg());
 
         return educationDto;
     }
@@ -38,8 +37,6 @@ public class EducationConverter {
         education.setType(educationDto.getType());
         education.setDateStart(educationDto.getDateStart());
         education.setDateEnd(educationDto.getDateEnd());
-        education.setImg(educationDto.getImg());
-
         return education;
     }
 

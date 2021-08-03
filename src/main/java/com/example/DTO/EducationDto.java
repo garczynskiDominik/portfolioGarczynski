@@ -13,5 +13,4 @@ public class EducationDto {
     public String type;
     public Date dateStart;
     public Date dateEnd;
-    public String img;
 }

@@ -32,8 +32,7 @@ public class EducationServices {
                 education.getDescription(),
                 education.getType(),
                 education.getDateStart(),
-                education.getDateEnd(),
-                education.getImg()
+                education.getDateEnd()
         );
 
         educationRepository.save(edit);

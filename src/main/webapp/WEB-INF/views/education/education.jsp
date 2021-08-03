@@ -31,10 +31,6 @@
             <c:forEach items="${education}" var="edu">
                 <div class="col-md-4">
                     <div class="card card-blog">
-                        <div class="card-img">
-                            <img src="${edu.img}" alt=""
-                                                            class="img-fluid">
-                        </div>
                         <div class="card-body">
                             <div class="card-category-box">
                                 <div class="card-category">

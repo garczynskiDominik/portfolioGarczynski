@@ -24,23 +24,23 @@ public class Education {
     private Date dateStart;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date dateEnd;
-    private String img;
+
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "about_id")
     private About about;
 
-    public Education(Long id, String nameOfSchool, String description, String type, Date dateStart, Date dateEnd, String img) {
+    public Education(Long id, String nameOfSchool, String description, String type, Date dateStart, Date dateEnd) {
         this.id = id;
         this.nameOfSchool = nameOfSchool;
         this.description = description;
         this.type = type;
         this.dateStart = dateStart;
         this.dateEnd = dateEnd;
-        this.img = img;
+
     }
 
-    public Education(String nameOfSchool, String description, String type, Date dateStart, Date dateEnd, String img) {
+    public Education(String nameOfSchool, String description, String type, Date dateStart, Date dateEnd) {
 
     }
 }
