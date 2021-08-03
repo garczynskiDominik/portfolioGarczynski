@@ -21,7 +21,7 @@ public class Users {
     private String password;
     private String company;
     private boolean enable = true;
-    private String role = "ROLE_ADMIN";
+    private String role = "ROLE_USER";
     private Date createdDate = new Date();
 
 
