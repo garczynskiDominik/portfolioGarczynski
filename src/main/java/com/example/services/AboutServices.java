@@ -4,21 +4,18 @@ import com.example.DTO.AboutDto;
 import com.example.DTO.converters.AboutConverter;
 import com.example.model.About;
 import com.example.repository.AboutRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
-
 import java.util.List;
 
+
+@RequiredArgsConstructor
 @Service
 public class AboutServices {
 
     private final AboutRepository aboutRepository;
     private final AboutConverter aboutConverter;
-
-    public AboutServices(AboutRepository aboutRepository, AboutConverter aboutConverter) {
-        this.aboutRepository = aboutRepository;
-        this.aboutConverter = aboutConverter;
-    }
 
     public About getAbout(Long id) {
         return aboutRepository.findById(id).orElse(null);

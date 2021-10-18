@@ -4,20 +4,17 @@ import com.example.DTO.converters.WorkConverter;
 import com.example.DTO.WorkDto;
 import com.example.model.Work;
 import com.example.repository.WorkRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
-
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class WorkServices {
     private final WorkRepository workRepository;
     private final WorkConverter workConverter;
 
-    public WorkServices(WorkRepository workRepository, WorkConverter workConverter) {
-        this.workRepository = workRepository;
-        this.workConverter = workConverter;
-    }
 
     public Work getWork(Long id) {
         return workRepository.findById(id).orElse(null);
