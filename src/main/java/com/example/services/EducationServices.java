@@ -38,7 +38,7 @@ public class EducationServices {
         educationRepository.save(edit);
     }
 
-    public void getAllEucations(Model model) {
+    public void getAllEducations(Model model) {
         List<Education> listEducations = educationRepository.findAll();
         List<EducationDto> educationDtos = educationConverter.entityToDto(listEducations);
         model.addAttribute("education", educationDtos);

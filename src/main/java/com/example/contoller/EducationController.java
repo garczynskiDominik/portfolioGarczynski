@@ -1,7 +1,6 @@
 package com.example.contoller;
 
 import com.example.model.Education;
-import com.example.model.Technologies;
 import com.example.repository.EducationRepository;
 import com.example.services.EducationServices;
 import lombok.RequiredArgsConstructor;
@@ -11,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
 
 import javax.transaction.Transactional;
-import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
@@ -23,7 +21,7 @@ public class EducationController {
 
     @GetMapping(value = {"/education"})
     public String getEducation(Model model) {
-        educationServices.getAllEucations(model);
+        educationServices.getAllEducations(model);
         return "education/education";
     }
 
