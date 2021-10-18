@@ -2,7 +2,6 @@ package com.example.DTO.converters;
 
 import com.example.DTO.AboutDto;
 import com.example.model.About;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
