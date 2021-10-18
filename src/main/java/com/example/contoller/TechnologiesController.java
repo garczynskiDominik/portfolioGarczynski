@@ -3,6 +3,7 @@ package com.example.contoller;
 import com.example.model.Technologies;
 import com.example.repository.TechnologiesRepository;
 import com.example.services.TechnologiesServices;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -15,15 +16,13 @@ import javax.transaction.Transactional;
 
 
 @Controller
+@RequiredArgsConstructor
 public class TechnologiesController {
 
     private final TechnologiesRepository technologiesRepository;
     private final TechnologiesServices technologiesServices;
 
-    public TechnologiesController(TechnologiesRepository technologiesRepository, TechnologiesServices technologiesServices) {
-        this.technologiesRepository = technologiesRepository;
-        this.technologiesServices = technologiesServices;
-    }
+
 
     @RequestMapping(value = {"/technologies"}, method = RequestMethod.GET)
     public String getTechnologies(Model model) {

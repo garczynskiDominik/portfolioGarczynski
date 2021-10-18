@@ -1,5 +1,6 @@
 package com.example.config;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,13 +15,10 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableWebSecurity
+@RequiredArgsConstructor
 public class WebSeciurityConfig extends WebSecurityConfigurerAdapter {
 
     private final DataSource dataSource;
-
-    public WebSeciurityConfig(DataSource dataSource) {
-        this.dataSource = dataSource;
-    }
 
     @Bean
     protected PasswordEncoder passwordEncoder() {

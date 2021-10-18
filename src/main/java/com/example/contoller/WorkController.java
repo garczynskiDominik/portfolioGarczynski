@@ -3,6 +3,7 @@ package com.example.contoller;
 import com.example.model.Work;
 import com.example.repository.WorkRepository;
 import com.example.services.WorkServices;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -15,15 +16,11 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @Controller
+@RequiredArgsConstructor
 public class WorkController {
 
     private final WorkRepository workRepository;
     private final WorkServices workServices;
-
-    public WorkController(WorkRepository workRepository, WorkServices workServices) {
-        this.workRepository = workRepository;
-        this.workServices = workServices;
-    }
 
 
     @RequestMapping(value = {"/work"}, method = RequestMethod.GET)

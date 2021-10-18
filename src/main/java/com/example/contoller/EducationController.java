@@ -4,6 +4,7 @@ import com.example.model.Education;
 import com.example.model.Technologies;
 import com.example.repository.EducationRepository;
 import com.example.services.EducationServices;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -16,15 +17,12 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @Controller
+@RequiredArgsConstructor
 public class EducationController {
 
     private final EducationRepository educationRepository;
     private final EducationServices educationServices;
 
-    public EducationController(EducationRepository educationRepository, EducationServices educationServices) {
-        this.educationRepository = educationRepository;
-        this.educationServices = educationServices;
-    }
 
     @RequestMapping(value = {"/education"}, method = RequestMethod.GET)
     public String getEducation(Model model) {

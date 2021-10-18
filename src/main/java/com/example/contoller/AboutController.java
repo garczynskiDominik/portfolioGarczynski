@@ -3,6 +3,7 @@ package com.example.contoller;
 import com.example.model.About;
 import com.example.repository.AboutRepository;
 import com.example.services.AboutServices;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -13,15 +14,12 @@ import org.springframework.web.servlet.view.RedirectView;
 
 
 @Controller
+@RequiredArgsConstructor
 public class AboutController {
 
     private final AboutRepository aboutRepository;
     private final AboutServices aboutServices;
 
-    public AboutController(AboutRepository aboutRepository, AboutServices aboutServices) {
-        this.aboutRepository = aboutRepository;
-        this.aboutServices = aboutServices;
-    }
 
     @RequestMapping(value = {"/about"}, method = RequestMethod.GET)
     public String getAbouts(Model model) {
