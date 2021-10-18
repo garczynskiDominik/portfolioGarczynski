@@ -59,12 +59,6 @@
                                                     ></span>
                                                 </div>
                                             </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <input type="text" name="img" class="form-control" id="img"
-                                                           placeholder="enter link to IMG" required>
-                                                </div>
-                                            </div>
                                             <div class="col-md-12 text-center">
                                                 <input class="button button-a button-big button-rouded" type="submit"
                                                        value="Save"

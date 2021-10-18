@@ -4,9 +4,7 @@ import com.example.DTO.UsersDto;
 import com.example.services.UserServices;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
 
 @Controller
@@ -16,12 +14,12 @@ public class UserController {
     private final UserServices userServices;
 
 
-    @RequestMapping(value = {"/addUser"}, method = RequestMethod.GET)
+    @GetMapping(value = {"/addUser"})
     public String getAddUser() {
         return "login/register";
     }
 
-    @RequestMapping(value = {"/addUser"}, method = RequestMethod.POST)
+    @PostMapping(value = {"/addUser"})
     public RedirectView postAddUser(@ModelAttribute UsersDto userDto){
         userServices.addUserPost(userDto);
         return new RedirectView("/login");

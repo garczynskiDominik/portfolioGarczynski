@@ -25,17 +25,6 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="row">
-                                                        <div class="col-sm-6 col-md-5">
-                                                            <div class="about-img">
-                                                                <img SRC="${education.img}"
-                                                                     width="150" height="200">
-                                                                </br>
-                                                            </div>
-                                                            <input class="form-control"
-                                                                   type="text"
-                                                                   name="img"
-                                                                   value="${education.img}">
-                                                        </div>
                                                         <div class="col-sm-6 col-md-7">
                                                             <div class="about-info">
                                                                 <p><span class="title-s">Title: </span> <span><label

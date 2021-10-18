@@ -1,6 +1,7 @@
 package com.example.contoller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -9,12 +10,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class Login {
 
 
-    @RequestMapping(value = {"/login"}, method = RequestMethod.GET)
+    @GetMapping(value = {"/login"})
     public String postLogin() {
         return "/login/login";
     }
 
-    @RequestMapping(value = {"/register"}, method = RequestMethod.GET)
+    @GetMapping(value = {"/register"})
     public String getRegister() {
         return "/login/register";
     }

@@ -5,6 +5,7 @@ import com.example.repository.AboutRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -16,7 +17,7 @@ public class ContactController {
 
     private final AboutRepository aboutRepository;
 
-    @RequestMapping(value = {"/contact"}, method = RequestMethod.GET)
+    @GetMapping(value = {"/contact"})
     public String getAboutsForContact(Model model) {
         List<About> list = aboutRepository.findAll();
         model.addAttribute("about", list);

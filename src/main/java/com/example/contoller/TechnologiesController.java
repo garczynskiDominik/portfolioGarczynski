@@ -6,10 +6,7 @@ import com.example.services.TechnologiesServices;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
 
 import javax.transaction.Transactional;
@@ -23,39 +20,38 @@ public class TechnologiesController {
     private final TechnologiesServices technologiesServices;
 
 
-
-    @RequestMapping(value = {"/technologies"}, method = RequestMethod.GET)
+    @GetMapping(value = {"/technologies"})
     public String getTechnologies(Model model) {
         technologiesServices.getAllTechnologies(model);
         return "technologies/technologies";
     }
 
-    @RequestMapping(value = {"addTechnologies"}, method = RequestMethod.GET)
+    @GetMapping(value = {"addTechnologies"})
     public String getAddTechnnologies() {
         return "technologies/addTechnologies";
     }
 
 
-    @RequestMapping(value = {"addTechnologies"}, method = RequestMethod.POST)
+    @PostMapping(value = {"addTechnologies"})
     public RedirectView addTechnologies(@ModelAttribute Technologies technologies) {
         technologiesRepository.save(technologies);
         return new RedirectView("/technologies");
     }
 
-    @RequestMapping(value = {"/editTechnologies/{id}"}, method = RequestMethod.POST)
+    @PostMapping(value = {"/editTechnologies/{id}"})
     public RedirectView saveEditTechnologies(@ModelAttribute Technologies technologies, @PathVariable("id") Long id) {
         technologiesServices.editTechnologies(technologies, id);
         return new RedirectView("/technologies");
     }
 
-    @RequestMapping(value = {"/editTechnologies/{id}"}, method = RequestMethod.GET)
+    @GetMapping(value = {"/editTechnologies/{id}"})
     public String getEditTechnologies(Model model, @PathVariable("id") Long id) {
         model.addAttribute("technologies", technologiesServices.getTechnologies(id));
         return "technologies/editTechnologies";
     }
 
     @Transactional
-    @RequestMapping(value = {"/deleteTechnologies/{id}"}, method = {RequestMethod.POST})
+    @PostMapping(value = {"/deleteTechnologies/{id}"})
     public RedirectView deleteTechnologies(@PathVariable("id") Long id) {
         technologiesRepository.deleteById(id);
         return new RedirectView("/technologies");
