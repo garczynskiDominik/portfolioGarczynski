@@ -1,7 +1,6 @@
 package com.example.contoller;
 
 import com.example.model.Work;
-import com.example.repository.WorkRepository;
 import com.example.services.WorkServices;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -12,13 +11,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.view.RedirectView;
 
-import javax.transaction.Transactional;
-
 @Controller
 @RequiredArgsConstructor
 public class WorkController {
 
-    private final WorkRepository workRepository;
     private final WorkServices workServices;
 
     @GetMapping(value = {"/work"})
@@ -34,7 +30,7 @@ public class WorkController {
 
     @PostMapping(value = {"/addWork"})
     public RedirectView addWork(@ModelAttribute Work work) {
-        workRepository.save(work);
+        workServices.add(work);
         return new RedirectView("/work");
     }
 
@@ -47,14 +43,13 @@ public class WorkController {
 
     @GetMapping(value = {"/editWork/{id}"})
     public String getEditWork(Model model, @PathVariable("id") Long id) {
-        model.addAttribute("work", workServices.getWork(id));
+        workServices.egitWorkGet(model, id);
         return "work/editWork";
     }
 
-    @Transactional
     @PostMapping(value = {"/deleteWork/{id}"})
     public RedirectView deleteWork(@PathVariable("id") Long id) {
-        workRepository.deleteById(id);
+        workServices.delete(id);
         return new RedirectView("/work");
     }
 }

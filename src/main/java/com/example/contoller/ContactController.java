@@ -1,7 +1,7 @@
 package com.example.contoller;
 
-import com.example.model.About;
 import com.example.repository.AboutRepository;
+import com.example.services.LoginService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,12 +13,11 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ContactController {
 
-    private final AboutRepository aboutRepository;
+    private final LoginService loginService;
 
     @GetMapping(value = {"/contact"})
     public String getAboutsForContact(Model model) {
-        List<About> list = aboutRepository.findAll();
-        model.addAttribute("about", list);
+        loginService.getInfoContact(model);
         return "contactSection/contact";
     }
 }

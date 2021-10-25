@@ -7,6 +7,7 @@ import com.example.repository.AboutRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
+
 import java.util.List;
 
 
@@ -49,5 +50,13 @@ public class AboutServices {
         List<About> list = aboutRepository.findAll();
         List<AboutDto> aboutDtos = aboutConverter.entityToDto(list);
         model.addAttribute("about", aboutDtos);
+    }
+
+    public void addAbout(About about) {
+        aboutRepository.save(about);
+    }
+
+    public void editAboutGet(Model model, Long id) {
+        model.addAttribute("about", getAbout(id));
     }
 }

@@ -1,22 +1,21 @@
 package com.example.contoller;
 
 import com.example.model.Technologies;
-import com.example.repository.TechnologiesRepository;
 import com.example.services.TechnologiesServices;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.view.RedirectView;
-
-import javax.transaction.Transactional;
 
 
 @Controller
 @RequiredArgsConstructor
 public class TechnologiesController {
 
-    private final TechnologiesRepository technologiesRepository;
     private final TechnologiesServices technologiesServices;
 
 
@@ -34,7 +33,7 @@ public class TechnologiesController {
 
     @PostMapping(value = {"addTechnologies"})
     public RedirectView addTechnologies(@ModelAttribute Technologies technologies) {
-        technologiesRepository.save(technologies);
+        technologiesServices.addTechnologie(technologies);
         return new RedirectView("/technologies");
     }
 
@@ -46,14 +45,13 @@ public class TechnologiesController {
 
     @GetMapping(value = {"/editTechnologies/{id}"})
     public String getEditTechnologies(Model model, @PathVariable("id") Long id) {
-        model.addAttribute("technologies", technologiesServices.getTechnologies(id));
+        technologiesServices.egitTechnologie(model, id);
         return "technologies/editTechnologies";
     }
 
-    @Transactional
     @PostMapping(value = {"/deleteTechnologies/{id}"})
     public RedirectView deleteTechnologies(@PathVariable("id") Long id) {
-        technologiesRepository.deleteById(id);
+        technologiesServices.delete(id);
         return new RedirectView("/technologies");
     }
 }

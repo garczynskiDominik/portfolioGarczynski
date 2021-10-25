@@ -7,6 +7,7 @@ import com.example.repository.TechnologiesRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
+
 import java.util.List;
 
 @Service
@@ -36,5 +37,19 @@ public class TechnologiesServices {
         List<Technologies> listTechnologies = technologiesRepository.findAll();
         List<TechnologiesDto> technologiesDtos = technologiesConverter.entityToDto(listTechnologies);
         model.addAttribute("technologies", technologiesDtos);
+    }
+
+    public void addTechnologie(Technologies technologies) {
+        technologiesRepository.save(technologies);
+    }
+
+    public void egitTechnologie(Model model, Long id) {
+        model.addAttribute("technologies", getTechnologies(id));
+
+    }
+
+    public void delete(Long id) {
+        technologiesRepository.deleteById(id);
+
     }
 }

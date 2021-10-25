@@ -7,6 +7,7 @@ import com.example.repository.WorkRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
+
 import java.util.List;
 
 @Service
@@ -37,5 +38,20 @@ public class WorkServices {
         List<Work> works = workRepository.findAll();
         List<WorkDto> workDtos = workConverter.entityToDto(works);
         model.addAttribute("work", workDtos);
+    }
+
+    public void add(Work work) {
+        workRepository.save(work);
+
+    }
+
+    public void egitWorkGet(Model model, Long id) {
+        model.addAttribute("work", getWork(id));
+
+    }
+
+    public void delete(Long id) {
+        workRepository.deleteById(id);
+
     }
 }
