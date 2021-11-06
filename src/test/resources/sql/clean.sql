@@ -1,0 +1,1 @@
+DELETE FROM gps WHERE device_id=9999;
