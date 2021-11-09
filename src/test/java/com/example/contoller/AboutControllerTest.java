@@ -7,8 +7,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MockMvcBuilder;
-import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import static org.hamcrest.Matchers.hasSize;
@@ -27,11 +25,8 @@ class AboutControllerTest {
     @Sql("/sql/About/testAbout.sql")
     void shouldGetSingleAbout() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/about"))
-                .andDo(print())
-                .andExpect(jsonPath("$.*", hasSize(50)));
-
-
-
+                .andExpect(jsonPath("$[0].name").value("Dominik"))
+                .andExpect(jsonPath("$.*", hasSize(1)));
 
     }
 
