@@ -25,6 +25,7 @@ class AboutControllerTest {
     @Sql("/sql/About/testAbout.sql")
     void shouldGetSingleAbout() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/about"))
+                .andDo(print())
                 .andExpect(jsonPath("$[0].name").value("Dominik"))
                 .andExpect(jsonPath("$.*", hasSize(1)));
 
